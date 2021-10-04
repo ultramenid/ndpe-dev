@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-green-ndpe{
+    background-color: #22361b;
+}
+
+.bg-brown-ndpe{
+    background-color: #e2e0d7;
+}
+
+.text-ndpe{
+    color:#22361b;
+}
+
+.bg-border-ndpe{
+    background-color: #7e1a20;
+}
+
+.border-ndpe{
+    border-color: #22361b;
+}
+
+.text-xss{
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.hero-image::after {
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(#192316, #192316, #192316);
+    background-color: #192316;
+    opacity: 0.8;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 100vh;
+    width: 100%;
+    content: '';
+  }
