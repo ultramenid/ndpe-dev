@@ -15,7 +15,7 @@
 
             <div x-data="{swiper: null}"
                 x-init="swiper = new Swiper($refs.container, {
-                    loop: true,
+                    loop: false,
                     slidesPerView: 1,
                     spaceBetween: 0,
 
@@ -49,7 +49,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <h2 class="text-5xl font-notoserif mb-3">Djarum</h2>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Djarum</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -65,7 +65,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <h2 class="text-5xl font-notoserif mb-3">Korindo</h2>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Korindo</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -81,7 +81,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <h2 class="text-5xl font-notoserif mb-3">Musi Mas</h2>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Musim Mas</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -112,32 +112,36 @@
 
             <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4">
                 <div class="col-span-1 flex flex-col">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1599225745499-60e0488b3d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer ">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1599225745499-60e0488b3d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer ">
 
-                    <p class="text-2xl  text-ndpe font-notoserif cursor-pointer">Gajah di pelupuk mata tidak terlihat, semut di seberang lautan terlihat</p>
+                    <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline">Gajah di pelupuk mata tidak terlihat, semut di seberang lautan terlihat</p>
                     <div class="flex flex-wrap mt-auto pt-3">
-                        <a href="#" class="font-bold" style="color: #277a28">Explore More</a>
+                        <a class="font-bold" style="color: #277a28">Explore More</a>
                     </div>
+                    </a>
                 </div>
 
                 <div class="col-span-1 flex flex-col">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjdG9yeSUyMHNtb2tlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=450&q=60" alt="" class="cursor-pointer">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjdG9yeSUyMHNtb2tlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=450&q=60" alt="" class="cursor-pointer">
 
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer">Djarum It velitiam a volumque aut veles maximen empore nusam quis auditium</p>
+                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline">Djarum It velitiam a volumque aut veles maximen empore nusam quis auditium</p>
                     <div class="flex flex-wrap mt-auto pt-3">
-                        <a href="#" class="font-bold" style="color: #277a28">Explore More</a>
+                        <a class="font-bold" style="color: #277a28">Explore More</a>
                     </div>
+                    </a>
                 </div>
 
                 <div class="col-span-1 flex flex-col">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1543470373-e055b73a8f29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1543470373-e055b73a8f29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer">
 
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer">NASA Deteksi Es Mencair di Greenland, Sinyal Memburuknya Perubahan Iklim</p>
+                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline">NASA Deteksi Es Mencair di Greenland, Sinyal Memburuknya Perubahan Iklim</p>
                     <div class="flex flex-wrap mt-auto pt-3">
-                        <a href="#" class="font-bold" style="color: #277a28">Explore More</a>
+                        <a class="font-bold" style="color: #277a28">Explore More</a>
                     </div>
+                    </a>
                 </div>
-              </div>
+            </div>
+
         </div>
     </div>
 

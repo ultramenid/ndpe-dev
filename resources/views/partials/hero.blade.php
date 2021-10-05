@@ -1,6 +1,11 @@
 <section class="relative">
-    <div class="min-h-screen hero-image bg-cover py-6" style="background-image: url({{ asset('assets/heroimage.jpeg') }});">
-        @include('partials.nav')
+    <div class="min-h-screen bg-update-ndpe py-6" style="
+        background-image: url({{ asset('assets/img-bg2.jpeg') }});
+        background-repeat: no-repat;
+        background-size: cover;
+        background-color: transparent;
+        background-blend-mode:multiply;">
+            @include('partials.nav')
 
         <!-- Span bottom edge -->
         <div class="relative z-10 max-w-6xl mx-auto" style="height: 70vh">

@@ -1,5 +1,5 @@
 <div class="max-w-6xl mx-auto relative z-10 sm:block hidden px-6" >
-    <div class="flex justify-between text-white items-center">
+    <div class="flex justify-between text-ndpe items-center">
         <div class="flex space-x-6">
             <a href="{{ url('/about') }}">About</a>
             <a href="{{ url('/call') }}">Call</a>
