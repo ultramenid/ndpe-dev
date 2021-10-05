@@ -114,7 +114,7 @@
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
                                 <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">RGE</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
+                                <p class="text-xs mb-6">Royal Golden Eagle AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
                                 <div class="flex flex-col space-y-2">
