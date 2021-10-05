@@ -49,7 +49,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Djarum</h2></a>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Djarum</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -65,7 +65,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Korindo</h2></a>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Korindo</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -81,7 +81,71 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">Musim Mas</h2></a>
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Musim Mas</h2></a>
+                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
+                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
+                                </p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
+                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
+                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
+                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
+                                    <a href="#" class="font-semibold underline text-xs">References</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-4 text-white">
+                            <div class="bg-border-ndpe h-2"></div>
+                            <div class="bg-green-ndpe px-6 py-4">
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Wilmar</h2></a>
+                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
+                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
+                                </p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
+                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
+                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
+                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
+                                    <a href="#" class="font-semibold underline text-xs">References</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-4 text-white">
+                            <div class="bg-border-ndpe h-2"></div>
+                            <div class="bg-green-ndpe px-6 py-4">
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">RGE</h2></a>
+                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
+                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
+                                </p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
+                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
+                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
+                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
+                                    <a href="#" class="font-semibold underline text-xs">References</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-4 text-white">
+                            <div class="bg-border-ndpe h-2"></div>
+                            <div class="bg-green-ndpe px-6 py-4">
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Salim</h2></a>
+                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
+                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
+                                </p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
+                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
+                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
+                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
+                                    <a href="#" class="font-semibold underline text-xs">References</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-4 text-white">
+                            <div class="bg-border-ndpe h-2"></div>
+                            <div class="bg-green-ndpe px-6 py-4">
+                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Sinarmas</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
