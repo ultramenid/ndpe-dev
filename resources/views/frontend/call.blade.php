@@ -62,7 +62,7 @@
                             <li class="leading-relaxed">Establish and ensure accessibility for rights holders and workers to an effective grievance mechanism and conflict resolution procedure and publish and follow non-compliance protocols[4] to engage, retain, suspend or stop/avoid non-compliant suppliers. Stop or avoid sourcing from corporate groups producing/sourcing/processing commodities who are violating the policy and/or those disassociated from credible certification systems[5] and have failed to implement corrective actions and remedy negative impacts.</li>
                         </ul>
                     </div>
-                    <div x-show=" recs === 'brands' ">
+                    <div x-show=" recs === 'brands' " x-cloak style="display: none !important">
                         <ul class="list-decimal px-8 text-gray-200 space-y-2">
                             <li class="leading-relaxed">Adopt and publish a credible policy on no deforestation, no natural ecosystem or peat conversion/ degradation, no exploitation & environmentally and socially responsible supply chains and investments. It must apply across global corporate group operations of their suppliers or clients. They must commit to supporting proximate conservation and restoration of natural ecosystems, including financing, and remediation of their social and environmental harms.
                             </li>
@@ -89,7 +89,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div x-show=" recs ==='individual' ">
+                    <div x-show=" recs ==='individual'" x-cloak style="display: none !important">
                         <ul class="list-decimal px-8 text-gray-200 space-y-2">
                             <li class="leading-relaxed">
                                 Purchase products shown by independent verification to have no raw materials violating the credible policy.

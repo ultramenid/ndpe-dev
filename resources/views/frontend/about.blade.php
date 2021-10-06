@@ -46,7 +46,7 @@
                                 Our platform does not score, thus not compare the performance of them with each other, as many platforms already do so. Rather, our platform tries to become a useful entry point for buyers, investors and other stakeholders of the 7 groups by (1) setting the bar up for what they commit; (2) shedding light on these groups’ anatomy, particularly its relationships and supply-chains; (3) tracking companies’ historical performance and warn future issues; (4) serving as a data bank of data and reports on cases investigated and reported by the NGOs and related media articles.
                             </p>
                         </div>
-                        <div x-show=" tabs === 'ownership'" class="flex flex-col space-y-6">
+                        <div x-show=" tabs === 'ownership'"  x-cloak style="display: none !important" class="flex flex-col space-y-6">
                             <p class="leading-relaxed">
                                 The platform will be managed by Auriga Nusantara, that developed and maintains various coalitions with many NGOs to publish joint reports and write joint letters on pressing topics. The coalitions keeps the participation flexible and open to allow NGOs decide to join or not join in any specific publication or letter. The coalition is also open for new members who work on the same topics to join.
                             </p>
@@ -54,7 +54,7 @@
                                 So far, NGOs that already consulted in developing the platform are Greenpeace, Forest People Program, Rainforest Action Network, Greenpeace, WWF, EPN, HAKI, Eyes on the Forest. It is planned to expand the NGO list, particularly one that operate in companies’ concession area.
                             </p>
                         </div>
-                        <div x-show="tabs === 'editorial' " class="flex flex-col space-y-6" >
+                        <div x-show="tabs === 'editorial' " x-cloak style="display: none !important" class="flex flex-col space-y-6" >
                             <p class="leading-relaxed">
                                 There will be two types of information published on the platform: (1) contents published only on the platform including joint publications, and (2) contents published by each NGO but posted at the platform.
                             </p>
@@ -62,7 +62,7 @@
                                 For (1), Auriga will set up an editorial team consisting of members representing participating organizations to peer review the new contents to ensure accuracy and alignment of the writing/language and substance. The contents can be drafted by any of the participating organisations and submitted for the peer review. For (2), each NGO submits the published contents to Auriga (who) to post them at the right section(s).
                             </p>
                         </div>
-                        <div x-show="tabs === 'content' " class="flex flex-col " >
+                        <div x-show="tabs === 'content' "  x-cloak style="display: none !important" class="flex flex-col " >
                             <p class="leading-relaxed">
                                 For the 4th week of Oct launch: The website will have the following contents:
                             </p>
@@ -90,7 +90,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div x-show="tabs ==='timeline'" class="flex flex-col space-y-2">
+                        <div x-show="tabs ==='timeline'" x-cloak style="display: none !important" class="flex flex-col space-y-2">
                             <p class="leading-relaxed">
                                <a class="underline italic">2nd week of Oct:</a>  defining the minimum content of the platform to be launched with the announcement
                             </p>

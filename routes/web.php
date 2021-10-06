@@ -42,3 +42,9 @@ Route::get('/call', function () {
     return view('frontend.call');
 });
 
+
+Route::get('/tools', function () {
+    return view('frontend.tools');
+});
+
+

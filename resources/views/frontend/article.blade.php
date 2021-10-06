@@ -5,18 +5,18 @@
     <div class="h-min-screen bg-article-ndpe py-6">
         @include('partials.navArticle')
 
-        <div class="max-w-6xl mx-auto relative px-6 mt-28">
-            <h1 class="text-5xl text-ndpe text-center  font-notoserif">Djarum It velitiam a volumque aut veles maximen nusam quis auditium</h1>
+        <div class="max-w-6xl mx-auto relative px-6 sm:mt-28 mt-6">
+            <h1 class="sm:text-5xl text-4xl text-ndpe text-center  font-notoserif">Djarum It velitiam a volumque aut veles maximen nusam quis auditium</h1>
 
             <img class="text-center mt-12" src="https://images.unsplash.com/photo-1585252155261-cff31944d781?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" alt="">
 
             <div class="max-w-4xl mx-auto relative px-6 mt-12">
-                <div class="flex justify-between space-x-32">
-                    <div class="w-4/12 border-t-2 border-ndpe">
+                <div class="flex sm:flex-row flex-col justify-between sm:space-x-32 space-x-0 sm:space-y-0 space-y-4">
+                    <div class="sm:w-4/12 w-full border-t-2 border-ndpe">
                         <a class="text-ndpe text-xl font-semibold "> NAMA PENULIS</a>
                         <p class="italic">email</p>
                     </div>
-                    <div class="w-8/12 text-ndpe">
+                    <div class="sm:w-8/12 w-full text-ndpe">
                         <p>AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
                         <p class="mt-4">
                             Eriorehente vid earum esendant expera quate volorest asim fugia pro mo que paritem harum, incienis nemqui quos esequi dem rehenihicia doluptaturis dolorae por ametus dolupti doluptati conseque veraept assinvelesed maxima dollupt aspiciusam es et iduntem est, il et volent mosam aut lab ipiet quis si aciur aut dolore doluptas exces comni ut aliquam, quuntist, nonsequae nonsed maximil laccusam exerum .

@@ -15,6 +15,9 @@
     border-width: 0 21px 24px 21px;
     border-color: transparent transparent #22361b transparent;
 }
+.border-green-ndpe{
+    border-color: #22361b;
+}
 
 .bg-brown-ndpe{
     background-color: #e2e0d7;
@@ -22,6 +25,14 @@
 
 .text-ndpe{
     color:#22361b;
+}
+
+.text-more{
+    color: #33a635;
+}
+
+.bg-more{
+    background-color: #33a635;
 }
 
 .bg-article-ndpe{

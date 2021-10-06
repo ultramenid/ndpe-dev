@@ -11,8 +11,7 @@
         </div>
         <div class="flex space-x-6">
             <a href="{{url('/profile')}}">Corporation</a>
-            <a href="#">Tools</a>
-            <a href="#">Contact</a>
-        </div>
+            <a href="{{ url('/tools') }}">Performance</a>
+            </div>
     </div>
 </div>
