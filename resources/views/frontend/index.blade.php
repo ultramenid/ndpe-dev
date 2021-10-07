@@ -8,7 +8,7 @@
 
     {{-- content --}}
     <div class="bg-brown-ndpe py-12">
-        <div class="max-w-6xl mx-auto relative px-6">
+        <div class="max-w-6xl mx-auto  px-6">
             <h1 class="font-notoserif text-ndpe text-4xl sm:px-0 px-4">Corporation</h1>
             <div class="sm:w-6/12  w-full text-ndpe mt-6">
                 <p class="sm:px-0 px-4">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>

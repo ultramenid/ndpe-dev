@@ -266,8 +266,8 @@
                 </div>
             </div>
             <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20">
-                <div class="flex justify-between space-x-20" x-data="{ methods : 'method' }">
-                    <div class="w-5/12 flex flex-col space-y-4 ">
+                <div class="flex sm:flex-row flex-col justify-between sm:space-x-20 space-x-0 sm:space-y-0 space-y-6" x-data="{ methods : 'method' }">
+                    <div class="sm:w-5/12 w-full flex flex-col space-y-4 ">
                         <div class="border-b border-gray-300">
                             <a
                             :class="{ 'font-black' : methods === 'method' }"
@@ -279,7 +279,7 @@
                             class="text-2xl cursor-pointer" @click="methods = 'pengukuran' ">PENGUKURAN</a>
                         </div>
                     </div>
-                    <div class="w-7/12">
+                    <div class="sm:w-7/12 w-full">
                         <div class="flex flex-col space-y-4" x-show=" methods ==='method'" x-cloak style="display: none !important">
                             <p class="leading-relaxed text-gray-300">
                                 Method AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.Dusaes mi, sitatiust hicidia veria quodi inus pelibeatium expersperum nulluptatur? Quis aut ut venihilignia quiam, sum laut pe cum quamet quatur, cum faciet lam, volo maiore omnimi, quid molorepratem dolupta sitios nulpa doluptatium volorum veleseq uissum fugia ex et aut qui opta que.</p>

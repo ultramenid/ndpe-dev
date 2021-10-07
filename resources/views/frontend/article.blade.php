@@ -1,8 +1,8 @@
 @extends('layouts.indexLayout')
 
 @section('content')
-
-    @include('partials.header')
+@include('partials.header')
+<div class="bg-green-ndpe h-10 sm:block hidden"></div>
     <div class="h-min-screen bg-article-ndpe py-6">
         @include('partials.navArticle')
 

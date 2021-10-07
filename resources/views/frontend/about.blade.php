@@ -1,7 +1,6 @@
 @extends('layouts.indexLayout')
 
 @section('content')
-
 @include('partials.header')
     <section class="relative">
         <div class="min-h-screen bg-update-ndpe py-6" style="
@@ -12,12 +11,12 @@
         background-blend-mode:multiply;">
             @include('partials.nav')
 
-            <div class="max-w-6xl mx-auto relative px-6 py-28 text-gray-300 z-20"
+            <div class="max-w-6xl mx-auto px-6 py-28 text-gray-300 z-20"
             x-data="{ tabs: 'theplatform' }"
             >
                 <h1 class="text-5xl font-notoserif font-light">NDPE Transparency Platform</h1>
-                <div class="flex justify-between space-x-12 mt-12">
-                    <div class="w-5/12 flex flex-col space-y-4">
+                <div class="flex sm:flex-row flex-col justify-between sm:space-x-12 space-x-0 sm:space-y-0 space-y-6 mt-12">
+                    <div class="sm:w-5/12 w-full flex flex-col space-y-4">
                         <div class="border-b border-white w-11/12">
                             <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer">THE PLATFORM</a>
                         </div>
@@ -34,7 +33,7 @@
                             <a :class="{ 'font-bold' : tabs === 'timeline' }" @click=" tabs = 'timeline'"  class="text-2xl font-light cursor-pointer">TIMELINE</a>
                         </div>
                     </div>
-                    <div class="w-7/12">
+                    <div class="sm:w-7/12 w-full">
                         <div class="flex flex-col space-y-6" x-show="tabs === 'theplatform' ">
                             <p class="leading-relaxed">
                                 Complementary with the authority’s effort, saving the remaining natural forest cover and high conservation value areas, restoring damaged areas, and resolving social conflicts should be the corporate responsibility of concession holders.
@@ -110,5 +109,6 @@
             </div>
     </section>
 
+    @include('partials.footer')
 
 @endsection
