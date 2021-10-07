@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="bg-green-ndpe h-10"></div>
+@include('partials.header')
     <div class="h-min-screen bg-ndpe-profile py-6">
         @include('partials.nav')
         <div class="max-w-6xl mx-auto relative px-6 mt-12">

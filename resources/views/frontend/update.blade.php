@@ -1,7 +1,7 @@
 @extends('layouts.indexLayout')
 
 @section('content')
-    <div class="bg-green-ndpe h-10"></div>
+@include('partials.header')
     <div class="h-min-screen bg-update-ndpe py-6">
         @include('partials.nav')
         <div class="max-w-6xl mx-auto relative px-6 py-6">

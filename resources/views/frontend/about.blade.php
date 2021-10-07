@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="bg-green-ndpe h-10"></div>
+@include('partials.header')
     <section class="relative">
         <div class="min-h-screen bg-update-ndpe py-6" style="
         background-image: url({{ asset('assets/img-bg2.jpeg') }});
