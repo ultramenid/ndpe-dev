@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4"
+            <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 sm:block hidden"
             x-data="{tabs: 'overview'}"
             >
                 <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
@@ -109,6 +109,77 @@
                     <p x-show="tabs === 'financial'" x-cloak style="display: none !important">Financial AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
                     <p x-show="tabs === 'buyer'" x-cloak style="display: none !important">Buyer AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
                     <p x-show="tabs === 'performance'" x-cloak style="display: none !important">performance AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                </div>
+            </div>
+
+            <div class="bg-brown-ndpe mt-20 px-6 py-4 sm:hidden block"
+                x-data="{overview:false, area:false, ownership:false, financial:false, buyer:false, performance:false}">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=!overview, area=false, ownership=false, financial=false, buyer=false, performance=false"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            Overview
+                        </button>
+                        <div x-show="overview" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Overview AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=false, area=!area, ownership=false, financial=false, buyer=false, performance=false"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            Area
+                        </button>
+                        <div x-show="area" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Area AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=false, area=false, ownership=!ownership, financial=false, buyer=false, performance=false"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            Ownership
+                        </button>
+                        <div x-show="ownership" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Ownership AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=false, area=false, ownership=false, financial=!financial, buyer=false, performance=false"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            Financial
+                        </button>
+                        <div x-show="financial" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Financial AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=false, area=false, ownership=false, financial=false, buyer=!buyer, performance=false"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            Buyer
+                        </button>
+                        <div x-show="buyer" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Buyer AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-2">
+                        <button
+                        @click="overview=false, area=false, ownership=false, financial=false, buyer=false, performance=!performance"
+                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
+                            NDPE Performance
+                        </button>
+                        <div x-show="performance" x-cloak style="display: none !important" class="bg-green-ndpe px-4 py-6 text-white">
+                            <p >Performance AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

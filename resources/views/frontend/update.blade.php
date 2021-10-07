@@ -40,10 +40,10 @@
     </div>
     <div class="bg-ndpe-profile min-h-screen">
         <div class="max-w-6xl mx-auto relative px-6 py-6">
-            <div class="mt-12">
+            <div class="mt-2">
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <h2 class="text-4xl font-notoserif">Cetak sawah di gambut Kalteng potensial hadirkan petaka baru</h2>
+                        <h2 class="sm:text-4xl text-2xl font-notoserif">Cetak sawah di gambut Kalteng potensial hadirkan petaka baru</h2>
                         <p class="mt-6">Jangan gunakan pandemi sebagai alasan mengeksploitasi gambut. Berhentilah mengulang kesalahan Proyek Lahan Gambut Sejuta Hektar.</p>
                     </div>
                     <div class="sm:block hidden w-3/12">
@@ -53,10 +53,10 @@
                 <div class="border-b border-white mt-4"></div>
             </div>
 
-            <div class="mt-12">
+            <div class="mt-2">
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <h2 class="text-4xl font-notoserif">Industri pulp perparah risiko kebakaran hutan dan lahan gambut</h2>
+                        <h2 class="tsm:text-4xl text-2xl font-notoserif">Industri pulp perparah risiko kebakaran hutan dan lahan gambut</h2>
                         <p class="mt-6">Meski perusahaan HTI menyatakan komitmen mengurangi risiko kebakaran, tapi kebakaran terus terjadi di konsesi HTI. Termasuk tahun 2019.</p>
                     </div>
                     <div class="sm:block hidden w-3/12">
@@ -66,10 +66,10 @@
                 <div class="border-b border-white mt-4"></div>
             </div>
 
-            <div class="mt-12">
+            <div class="mt-2">
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <h2 class="text-4xl font-notoserif">2018, APP dan APRIL masih terima kayu kontroversial Djarum Grup</h2>
+                        <h2 class="sm:text-4xl text-2xl font-notoserif">2018, APP dan APRIL masih terima kayu kontroversial Djarum Grup</h2>
                         <p class="mt-6">Meski telah diungkap tahun sebelumnya, tahun 2018 ternyata APP dan APRIL tetap membeli kayu kontroversial Djarum Grup.</p>
                     </div>
                     <div class="sm:block hidden w-3/12">
@@ -79,10 +79,10 @@
                 <div class="border-b border-white mt-4"></div>
             </div>
 
-            <div class="mt-12 mb-8">
+            <div class="mt-2">
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <h2 class="text-4xl font-notoserif">Pengakuan APP: Terhubung dengan perusahaan bermasalah</h2>
+                        <h2 class="sm:text-4xl text-2xl font-notoserif">Pengakuan APP: Terhubung dengan perusahaan bermasalah</h2>
                         <p class="mt-6">Daftar perusahaan yang dideklarasikan APP belum mencakup seluruh struktur perusahaan APP/Sinarmas.</p>
                     </div>
                     <div class="sm:block hidden w-3/12">

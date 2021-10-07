@@ -13,7 +13,7 @@
             <div class="max-w-4xl mx-auto relative px-6 sm:mt-32 mt-22 text-gray-300 z-20">
                 <h1 class="sm:text-6xl text-3xl font-notoserif text-center">NDPE Performance</h1>
             </div>
-            <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20">
+            <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20 sm:block hidden">
                 <div class="bg-brown-ndpe  px-4 py-6 overflow-x-auto">
                     <div class="w-full">
                             <table class="min-w-max w-full table-auto">
@@ -40,7 +40,7 @@
                                             </div>
                                         </td>
                                         <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe">
-                                            <div class="flex items-center space-x-1  justify-center">
+                                            <div class="flex items-center space-x-1  justify-center ">
                                                 <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
                                                 <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
                                                 <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
@@ -265,6 +265,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20 sm:hidden block">
+                <div class="bg-brown-ndpe  px-4 py-6 overflow-x-auto">
+                    <h1 class="text-2xl text-ndpe font-semibold">Company Name</h1>
+
+                </div>
+            </div>
+
+
             <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20">
                 <div class="flex sm:flex-row flex-col justify-between sm:space-x-20 space-x-0 sm:space-y-0 space-y-6" x-data="{ methods : 'method' }">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4 ">
