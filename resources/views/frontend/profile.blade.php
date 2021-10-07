@@ -29,6 +29,7 @@
                 </div>
             </div>
 
+            {{-- tabs lg --}}
             <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 sm:block hidden"
             x-data="{tabs: 'overview'}"
             >
@@ -112,6 +113,7 @@
                 </div>
             </div>
 
+            {{-- tabs sm --}}
             <div class="bg-brown-ndpe mt-20 px-6 py-4 sm:hidden block"
                 x-data="{overview:false, area:false, ownership:false, financial:false, buyer:false, performance:false}">
                 <div class="flex flex-col space-y-4">
