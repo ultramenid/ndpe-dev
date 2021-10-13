@@ -29,7 +29,7 @@
         <meta name="twitter:creator" content="@AURIGA_ID">
         <meta name="twitter:url" content="{{url()->full()}}" />
         <!-- Twitter summary card with large image must be at least 280x150px -->
-        <meta name="twitter:image:src" content="{{asset('assets/heroimage.jpeg')}}">
+        <meta name="twitter:image:src" content="{{asset('assets/NDPE.jpg')}}">
 
         <!-- Open Graph data -->
         <meta property="og:title" content="NDPE Transparency Platform" />
