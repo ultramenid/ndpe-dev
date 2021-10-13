@@ -175,36 +175,36 @@
             </div>
 
             <div class="border-b-2 border-ndpe mb-6">
-                <a class="text-ndpe font-bold">UPDATE</a>
+                <a class="text-ndpe font-bold">UPDATES</a>
             </div>
 
-            <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4">
-                <div class="col-span-1 flex flex-col">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1599225745499-60e0488b3d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer ">
+            <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4 sm:mt-12 sm-6">
+                <div class="col-span-1 flex flex-col ">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595436986_5f186fba23a5a.gif" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
 
-                    <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline">Gajah di pelupuk mata tidak terlihat, semut di seberang lautan terlihat</p>
+                    <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Analisis citra: Deforestasi dalam konsesi Djarum Grup di Kaltim</p>
                     <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold" style="color: #277a28">Explore More</a>
+                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-span-1 flex flex-col ">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595501900_5f196d4c899ab.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center ">
+
+                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Deforestasi di Muara Sungai Landak, konsesi terhubung APP</p>
+                    <div class="flex flex-wrap mt-auto pt-3">
+                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
                     </div>
                     </a>
                 </div>
 
                 <div class="col-span-1 flex flex-col">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjdG9yeSUyMHNtb2tlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=450&q=60" alt="" class="cursor-pointer">
+                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595585064_5f1ab228b5098.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center">
 
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline">Djarum It velitiam a volumque aut veles maximen empore nusam quis auditium</p>
+                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Kebijakan land-swap: Setengah hati lindungi gambut & hutan alam</p>
                     <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold" style="color: #277a28">Explore More</a>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-span-1 flex flex-col">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://images.unsplash.com/photo-1543470373-e055b73a8f29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&q=80" alt="" class="cursor-pointer">
-
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline">NASA Deteksi Es Mencair di Greenland, Sinyal Memburuknya Perubahan Iklim</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold" style="color: #277a28">Explore More</a>
+                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
                     </div>
                     </a>
                 </div>

@@ -36,13 +36,15 @@
                     <div class="sm:w-7/12 w-full">
                         <div class="flex flex-col space-y-6" x-show="tabs === 'theplatform' ">
                             <p class="leading-relaxed">
-                                Complementary with the authority’s effort, saving the remaining natural forest cover and high conservation value areas, restoring damaged areas, and resolving social conflicts should be the corporate responsibility of concession holders.
+                                This website is developed and managed by Auriga, in collaboration with A, B, C and with support from those who have been working for nature conservation and better livelihoods of people in Indonesia for a long time.</p>
+                            <p class="leading-relaxed">
+                                2020 deforestation and conversion free (DCF) promises by many global companies were not met because key deforestation drivers - pulp & paper and palm oil companies - continue their business as usual in Indonesia. We urge global commodity industries to cut ties with the drivers of <a class="text-red-500">deforestation</a> , <a class="text-red-500">climate change</a> ,<a class="text-red-500"> human rights violation </a>and <a class="text-red-500">biodiversity loss</a>.
                             </p>
                             <p class="leading-relaxed">
-                                To date, hundreds of companies have declared NDPE commitment to implement necessary actions, however, the progress has been still too slow and changes fall short of our expectations. We want to encourage companies to have meaningful commitments, set and achieve the right targets, and as a start for that we launched this website to keep track of the performance of seven corporate groups that operate in Indonesia – many but not all of them have already published NDPE commitments.
+                                We hope that this website will become a go-to tool for global buyers and investors to get up-to-date information on the latest issues and understand the performance of <a href="{{ url('tools') }}" class="text-red-500">seven key corporate groups</a> producing and trading commodities against the <a href="{{ url('call') }}" class="text-red-500">benchmark</a>  set up by NGOs so they can take informed decisions to implement their responsible commodity sourcing policies.
                             </p>
                             <p class="leading-relaxed">
-                                Our platform does not score, thus not compare the performance of them with each other, as many platforms already do so. Rather, our platform tries to become a useful entry point for buyers, investors and other stakeholders of the 7 groups by (1) setting the bar up for what they commit; (2) shedding light on these groups’ anatomy, particularly its relationships and supply-chains; (3) tracking companies’ historical performance and warn future issues; (4) serving as a data bank of data and reports on cases investigated and reported by the NGOs and related media articles.
+                                We want to stress one thing - we are not boycotting Indonesia. We want to protect Indonesia from destruction caused by global commodity demand and individual profit making.
                             </p>
                         </div>
                         <div x-show=" tabs === 'ownership'"  x-cloak style="display: none !important" class="flex flex-col space-y-6">

@@ -19,10 +19,17 @@
     border-color: #22361b;
 }
 
+.border-green-ndpe-2{
+    border-color: #121b0f;
+}
+
 .bg-brown-ndpe{
     background-color: #e2e0d7;
 }
 
+.text-ndpe-2{
+    color: #121b0f;
+}
 .text-ndpe{
     color:#22361b;
 }
@@ -41,6 +48,10 @@
 
 .bg-border-ndpe{
     background-color: #7e1a20;
+}
+
+.text-tag{
+    color: #7e1a20;
 }
 
 .border-ndpe{

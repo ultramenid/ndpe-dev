@@ -1,4 +1,23 @@
-<div class="bg-green-ndpe h-10 sm:block hidden"></div>
+<div class="bg-green-ndpe h-10 sm:block hidden py-2">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex space-x-4 text-right">
+                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/twitter.svg" alt="" class="h-3 ">
+                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/facebook.svg" alt="" class="h-3">
+                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/ig.png" alt="" class="h-3">
+                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/linkedin.png" alt="" class="h-3">
+            </div>
+            <div class="flex space-x-2 text-gray-300 text-sm">
+                <a class="cursor-pointer">ID</a>
+                <div class="border-l border-gray-300"></div>
+                <a class="cursor-pointer">EN</a>
+                <div class="border-l border-gray-300"></div>
+                <a class="cursor-pointer">JP</a>
+            </div>
+        </div>
+
+    </div>
+</div>
     <header class="bg-green-ndpe sticky top-0 z-50">
         <div x-data="{ open: false }" class="px-6 py-2 bg-green-ndpe z-10 sm:hidden block">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300 " viewBox="0 0 20 20" fill="currentColor" @click="open = true">

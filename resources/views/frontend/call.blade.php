@@ -11,7 +11,7 @@
         background-blend-mode:multiply;">
             @include('partials.nav')
             <div class="max-w-6xl mx-auto  px-6 py-6">
-                <h1 class="font-notoserif text-6xl text-gray-200 mt-20">Call</h1>
+                <h1 class="font-notoserif text-6xl text-gray-200 mt-20">Benchmark</h1>
                 <p class="leading-relaxed text-gray-200 mt-6 sm:w-8/12 w-full   ">
                     NGOs supporting this website worked together to develop the following joint recommendations on deforestation risk commodities. The group has initially developed the following recommendations for deforestation risk commodities produced in Indonesia with the intention of applying and, as warranted, adapting them to other countries and regions producing deforestation commodities. The recommendations can be applied globally, but have been developed with strong emphasis on oil palm and pulp, paper, chips, timber and other forest products in moist tropical forest regions like Indonesia (as of 10 Nov 2020).
                 </p>
@@ -34,13 +34,13 @@
                 <div class="flex sm:flex-row  flex-col justify-between" x-data="{ recs : 'corporate' }">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4 text-gray-200 mt-12  z-20 ">
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'corporate' }" @click=" recs = 'corporate' " class=" font-light cursor-pointer uppercase">CORPORATE</a>
+                            <a :class="{ 'font-bold' : recs === 'corporate' }" @click=" recs = 'corporate' " class=" font-light cursor-pointer uppercase">FOR PRODUCERS</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'brands' }" @click=" recs = 'brands'"   class=" font-light cursor-pointer uppercase">Brands, End Users, Investors</a>
+                            <a :class="{ 'font-bold' : recs === 'brands' }" @click=" recs = 'brands'"   class=" font-light cursor-pointer uppercase">FOR BUYERS & INVESTORS</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'individual' }" @click=" recs = 'individual' "  class="font-light cursor-pointer uppercase">Individual Consumers</a>
+                            <a :class="{ 'font-bold' : recs === 'individual' }" @click=" recs = 'individual' "  class="font-light cursor-pointer uppercase">FOR INDIVIDUAL CONSUMERS</a>
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full mt-10">
