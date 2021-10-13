@@ -1,6 +1,6 @@
 <section class="relative">
     <div class="min-h-screen bg-update-ndpe py-6" style="
-        background-image: url({{ asset('assets/img-bg2.jpeg') }});
+        background-image: url({{ asset('assets/new-bg.jpg') }});
         background-repeat: no-repat;
         background-size: cover;
         background-color: transparent;
