@@ -1,5 +1,9 @@
 @extends('layouts.indexLayout')
 
+@section('meta')
+    @include('partials.metaIndex')
+@endsection
+
 @section('content')
 @include('partials.header')
     <section class="relative">
@@ -11,7 +15,7 @@
         background-blend-mode:multiply;">
             @include('partials.nav')
             <div class="max-w-6xl mx-auto  px-6 py-6">
-                <h1 class="font-notoserif text-6xl text-gray-200 mt-20">Benchmark</h1>
+                <h1 class="font-notoserif text-6xl text-gray-200 mt-20">{{__('Benchmark')}}</h1>
                 <p class="leading-relaxed text-gray-200 mt-6 sm:w-8/12 w-full   ">
                     NGOs supporting this website worked together to develop the following joint recommendations on deforestation risk commodities. The group has initially developed the following recommendations for deforestation risk commodities produced in Indonesia with the intention of applying and, as warranted, adapting them to other countries and regions producing deforestation commodities. The recommendations can be applied globally, but have been developed with strong emphasis on oil palm and pulp, paper, chips, timber and other forest products in moist tropical forest regions like Indonesia (as of 10 Nov 2020).
                 </p>

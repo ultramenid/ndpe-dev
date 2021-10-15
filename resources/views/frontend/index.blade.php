@@ -1,5 +1,10 @@
 @extends('layouts.indexLayout')
 
+@section('meta')
+    @include('partials.metaIndex')
+@endsection
+
+
 @section('content')
 
     {{-- header --}}
@@ -54,7 +59,7 @@
                         <div x-ref="slider" class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Djarum</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Djarum</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -70,7 +75,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Korindo</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Korindo</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -86,7 +91,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Musim Mas</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Musim Mas</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -102,7 +107,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Wilmar</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Wilmar</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -118,7 +123,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">RGE</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">RGE</h2></a>
                                 <p class="text-xs mb-6">Royal Golden Eagle AboutVolo est, tet volup tament aliqui dentin re plitis pa quaspictem quossit, andiat.Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore.
                                 </p>
                                 <div class="flex flex-col space-y-2">
@@ -133,7 +138,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Salim</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Salim</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -149,7 +154,7 @@
                         <div class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ url('/profile') }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Sinarmas</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Sinarmas</h2></a>
                                 <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
                                     Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
                                 </p>
@@ -180,7 +185,7 @@
 
             <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4 sm:mt-12 sm-6">
                 <div class="col-span-1 flex flex-col ">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595436986_5f186fba23a5a.gif" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
+                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595436986_5f186fba23a5a.gif" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
 
                     <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Analisis citra: Deforestasi dalam konsesi Djarum Grup di Kaltim</p>
                     <div class="flex flex-wrap mt-auto pt-3">
@@ -190,7 +195,7 @@
                 </div>
 
                 <div class="col-span-1 flex flex-col ">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595501900_5f196d4c899ab.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center ">
+                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595501900_5f196d4c899ab.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center ">
 
                     <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Deforestasi di Muara Sungai Landak, konsesi terhubung APP</p>
                     <div class="flex flex-wrap mt-auto pt-3">
@@ -200,7 +205,7 @@
                 </div>
 
                 <div class="col-span-1 flex flex-col">
-                    <a href="{{ url('/article') }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595585064_5f1ab228b5098.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center">
+                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595585064_5f1ab228b5098.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center">
 
                     <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Kebijakan land-swap: Setengah hati lindungi gambut & hutan alam</p>
                     <div class="flex flex-wrap mt-auto pt-3">

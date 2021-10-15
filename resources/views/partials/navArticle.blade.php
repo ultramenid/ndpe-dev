@@ -1,22 +1,19 @@
 <div class="max-w-6xl mx-auto relative z-10 sm:block hidden px-6" >
     <div class="flex justify-between text-ndpe items-center">
         <div class="flex space-x-6">
-            <a href="{{ url('/about') }}">About</a>
-            <a href="{{ url('/call') }}">Benchmark</a>
-            <a href="{{ url('/update') }}">Updates</a>
+            <a class=" @if ($nav == 'about') underline @endif " href="{{ route('about', app()->getlocale() )}}">{{__('About')}}</a>
+            <a class=" @if ($nav == 'benchmark') underline @endif " href="{{ route('benchmark', app()->getlocale() )}}">{{__('Benchmark')}}</a>
+            <a class=" @if ($nav == 'update') underline @endif " href="{{ route('update', app()->getlocale() )}}">{{__('Updates')}}</a>
         </div>
         <div class="text-3xl cursor-pointer">
-            <a href="{{ url('/') }}" class="font-bold">NDPE </a>
-             <a href="{{ url('/') }}" > Transparency</a>
+            <a href="{{ route('index', app()->getlocale() )}}" class="font-bold">NDPE </a>
+             <a href="{{ route('index', app()->getlocale() )}}" > Transparency</a>
+
         </div>
         <div class="flex space-x-6">
-            <a href="{{url('/profile')}}">Corporation</a>
-            <a href="{{ url('/tools') }}">Performance</a>
-            <div class="flex space-x-2">
-                <a>ID</a>
-                <a>EN</a>
-                <a>JP</a>
-            </div>
+            <a href="{{ route('corporatedetail', [app()->getLocale()]) }}">{{__('Corporation')}}</a>
+            <a class=" @if ($nav == 'performance') underline @endif " href="{{ route('performance', app()->getlocale() )}}">{{__('Performance')}}</a>
+
         </div>
     </div>
 </div>
