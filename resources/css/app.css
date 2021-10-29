@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark .tox-editor-container{
+    background-color: rgba(36, 38, 45, var(--tw-bg-opacity)) !important;
+    color: white !important;
+}
+.tox-dialog__header{
+    background-color: #22361b !important;
+    color:white !important;
+}
+.tox-dialog__body-content{
+    background-color: #22361b !important;
+}
+.tox-dialog__footer{
+    background-color: #22361b !important;
+}
+.selection-bg ::selection {
+    background-color: #79ffe1;
+}
+
+.dark .selection-bg ::selection {
+        background-color: #f81ce5;
+        color: white;
+}
+
 .bg-green-ndpe{
     background-color: #22361b;
 }

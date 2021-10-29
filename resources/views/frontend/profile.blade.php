@@ -39,7 +39,7 @@
                 <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
                     {{-- overview --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'overview' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'overview' }"
                         @click=" tabs= 'overview'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         Overview
@@ -47,7 +47,7 @@
 
                     {{-- Area --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'area' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'area' }"
                         @click=" tabs= 'area'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         Area
@@ -55,7 +55,7 @@
 
                     {{-- Ownership --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'ownership' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'ownership' }"
                         @click=" tabs= 'ownership'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         Ownership
@@ -63,7 +63,7 @@
 
                     {{-- Financial --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'financial' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'financial' }"
                         @click=" tabs= 'financial'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         Financial
@@ -71,7 +71,7 @@
 
                     {{-- Buyer --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'buyer' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'buyer' }"
                         @click=" tabs= 'buyer'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         Buyer
@@ -79,14 +79,14 @@
 
                     {{-- NDPE Performance --}}
                     <button
-                        :class="{ 'sm:no-underline underline' : tabs === 'performance' }"
+                        :class="{ 'lg:no-underline underline' : tabs === 'performance' }"
                         @click=" tabs= 'performance'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         NDPE Performance
                     </button>
                 </div>
 
-                <div class="sm:grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 -mb-1 -mt-4 gap-4  hidden" >
+                <div class="lg:grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 -mb-1 -mt-4 gap-4  hidden" >
                     <div class="grid justify-items-center">
                         <div x-show="tabs === 'overview'" x-cloak style="display: none !important" class="triangle-ndpe"></div>
                     </div>

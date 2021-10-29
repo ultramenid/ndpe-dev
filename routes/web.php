@@ -1,12 +1,18 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AddCorporation;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CallController;
 use App\Http\Controllers\CorporatesController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GroupsController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerformanceController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\UpdatesController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
@@ -21,7 +27,7 @@ use Illuminate\Support\Facades\URL;
 |
 */
 //https force https
-URL::forceScheme('https');
+// URL::forceScheme('https');
 
 Route::redirect('/', '/en');
 
@@ -35,17 +41,32 @@ Route::group(['prefix' => '{lang}'], function () {
     Route::get('/corporatedetail/djarum', [CorporatesController::class, 'detail'])->name('corporatedetail');
     Route::get('/article/djarum', [ArticleController::class, 'detail'])->name('article');
 
-
-    Route::get('/profile', function () {
-        return view('frontend.profile');
-    });
+});
 
 
-    Route::get('/article', function () {
-        return view('frontend.article');
-    });
+//backend
+//if has session redirect to dashboard
+Route::group(['middleware' => 'checkSession'], function () {
+    Route::get('/cms/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/cms/settings', [SettingsController::class, 'index']);
+    Route::get('/cms/groups', [GroupsController::class, 'index']);
+    Route::get('/cms/updates', [UpdatesController::class, 'index']);
+    Route::get('/cms/addcorporation', [AddCorporation::class, 'index']);
+});
 
+
+//if there is no session , redirect to login page
+Route::group(['middleware' => 'hasSession'], function () {
+    Route::get('cms/login', [LoginController::class, 'index'])->name('login');
 });
 
 
 
+
+//route logout
+Route::get('/cms/page/logout', function () {
+    session()->flush();
+    return redirect('/cms/login');
+});
+
+Route::any('{query}', function() { return redirect('/'); })->where('query', '.*');
