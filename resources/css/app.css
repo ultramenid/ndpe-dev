@@ -2,20 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark .flatpickr-calendar{
+    background-color: #121317 !important;
+}
+.dark .flatpickr-weekday{
+    color: #9e9e9e !important;
+}
+.dark .flatpickr-monthDropdown-months{
+    color: #9e9e9e !important;
+}
+.dark .numInput{
+    color: #9e9e9e !important;
+}
+
+.flatpickr-calendar{
+    background-color: #e9e9e9 !important;
+}
+.flatpickr-weekday{
+    color: #121317 !important;
+}
+.flatpickr-monthDropdown-months{
+    color: #121317 !important;
+}
+.numInput{
+    color: #121317 !important;
+}
 .dark .tox-editor-container{
     background-color: rgba(36, 38, 45, var(--tw-bg-opacity)) !important;
     color: white !important;
 }
-.tox-dialog__header{
-    background-color: #22361b !important;
-    color:white !important;
-}
-.tox-dialog__body-content{
-    background-color: #22361b !important;
-}
-.tox-dialog__footer{
-    background-color: #22361b !important;
-}
+
 .selection-bg ::selection {
     background-color: #79ffe1;
 }

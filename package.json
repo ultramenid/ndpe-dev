@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@tailwindcss/aspect-ratio": "^0.3.0",
         "autoprefixer": "^10.3.6",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",

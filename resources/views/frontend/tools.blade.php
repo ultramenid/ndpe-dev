@@ -33,239 +33,37 @@
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-600 text-sm font-light">
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 mb-2">
-                                        <td class="bg-brown-ndpe border border-green-ndpe  text-ndpe  font-bold text-xl py-4 px-2"">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/Djarum-Logo.png') }}" alt="" class="h-10">
+                                    @foreach ($corporates as $item)
+                                        <tr class="h-4">
+                                            <td></td>
+                                        </tr>
+                                        <tr class="text-left text-gray-300 mb-2">
+                                            <td class="bg-brown-ndpe border border-green-ndpe  text-ndpe  font-bold text-xl py-4 px-2"">
+                                                <div class="flex flex-row items-center space-x-2">
+                                                    <div class="w-4/12 flex justify-center">
+                                                        <img src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="" class="h-10">
+                                                    </div>
+                                                    <p>{{ $item->name}}</p>
                                                 </div>
-                                                <p>Djarum</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe">
-                                            <div class="flex items-center space-x-1  justify-center ">
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4  border border-green-ndpe "><div class="flex  items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/MusimMas.png') }}" alt="" class="h-8 w-12">
+                                            </td>
+                                            <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe">
+                                                <div class="flex items-center space-x-1  justify-center ">
+                                                    @include('partials.rateDeforestation')
                                                 </div>
-                                                <p>Musim Mas</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/Korindo-Logo.png') }}" alt="" class="h-10">
+                                            </td>
+                                            <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe">
+                                                <div class="flex items-center space-x-1 justify-center">
+                                                    @include('partials.rateBloss')
                                                 </div>
-                                                <p>Korindo</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-more border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-yellow-400  border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/Wilmar-Logo.png') }}" alt="" class="h-8 w-12">
-                                                </div>
-                                                <p>Wilmar</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/RGE-Logo.png') }}" alt="" class="h-12">
-                                                </div>
-                                                <p>Royal Golden Eagle</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/Salim-Logo.png') }}" alt="" class="h-8">
-                                                </div>
-                                                <p>Salim</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
-                                    <tr class="h-4">
-                                        <td></td>
-                                    </tr>
-                                    <tr class="text-left text-gray-300 ">
-                                        <td class="bg-brown-ndpe  text-ndpe  font-bold text-xl py-4 px-2 border border-green-ndpe">
-                                            <div class="flex flex-row items-center space-x-2">
-                                                <div class="w-4/12 flex justify-center">
-                                                    <img src="{{ asset('assets/corporate/Sinarmas-Logo.png') }}" alt="" class="h-10">
-                                                </div>
-                                                <p>Sinarmas</p>
-                                            </div>
-                                        </td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                        <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
-                                                <div class="rounded-full h-4 w-4 bg-red-700 border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                                <div class="rounded-full h-4 w-4 bg-transparet border">&nbsp;</div>
-                                            </div></td>
-                                    </tr>
+                                            </td>
+                                            <td class="bg-green-ndpe py-4 px-2 border border-green-ndpe"><div class="flex items-center space-x-1 justify-center">
+                                                    @include('partials.ratePeatland')
+                                                </div></td>
+                                            <td class="bg-green-ndpe py-4  border border-green-ndpe "><div class="flex  items-center space-x-1 justify-center">
+                                                    @include('partials.rateSocial')
+                                                </div></td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                     </div>

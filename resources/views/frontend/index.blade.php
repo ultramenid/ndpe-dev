@@ -56,12 +56,12 @@
                 <div class="swiper-container" x-ref="container">
                     <div class="swiper-wrapper">
                     <!-- Slides -->
+                    @foreach ($corporates as $item)
                         <div x-ref="slider" class="swiper-slide p-4 text-white">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Djarum</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
+                                <a href="#"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
+                                <p class="text-xs mb-6">{{$item->description}}
                                 </p>
                                 <div class="flex flex-col space-y-2">
                                     <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
@@ -72,102 +72,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}" class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Korindo</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Musim Mas</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Wilmar</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">RGE</h2></a>
-                                <p class="text-xs mb-6">Royal Golden Eagle AboutVolo est, tet volup tament aliqui dentin re plitis pa quaspictem quossit, andiat.Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Salim</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide p-4 text-white">
-                            <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale()]) }}"  class="hover:underline"><h2 class="text-4xl font-notoserif mb-3">Sinarmas</h2></a>
-                                <p class="text-xs mb-6">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat.
-                                    Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.
-                                </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
-                            </div>
-                        </div>
-
+                    @endforeach
                     </div>
                 </div>
 
@@ -184,35 +89,17 @@
             </div>
 
             <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4 sm:mt-12 sm-6">
-                <div class="col-span-1 flex flex-col ">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595436986_5f186fba23a5a.gif" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
+                @foreach ($updates as $item)
+                    <div class="col-span-1 flex flex-col ">
+                        <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}"><img loading="lazy" loading="lazy" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{ $item->title }}"  alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
 
-                    <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Analisis citra: Deforestasi dalam konsesi Djarum Grup di Kaltim</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
+                        <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline pt-2">{{$item->title}}</p>
+                        <div class="flex flex-wrap mt-auto pt-3">
+                            <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}" class="font-bold text-ndpe cursor-pointer">Read More</a>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-
-                <div class="col-span-1 flex flex-col ">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595501900_5f196d4c899ab.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center ">
-
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Deforestasi di Muara Sungai Landak, konsesi terhubung APP</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-span-1 flex flex-col">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595585064_5f1ab228b5098.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center">
-
-                    <p class="text-2xl text-ndpe font-notoserif cursor-pointer hover:underline pt-2">Kebijakan land-swap: Setengah hati lindungi gambut & hutan alam</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-ndpe cursor-pointer">Read More</a>
-                    </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
 
         </div>

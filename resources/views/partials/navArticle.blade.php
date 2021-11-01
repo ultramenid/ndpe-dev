@@ -11,7 +11,7 @@
 
         </div>
         <div class="flex space-x-6">
-            <a href="{{ route('corporatedetail', [app()->getLocale()]) }}">{{__('Corporation')}}</a>
+            <a href="{{ route('corporatedetail', [app()->getLocale()]) }}">{{__('Groups')}}</a>
             <a class=" @if ($nav == 'performance') underline @endif " href="{{ route('performance', app()->getlocale() )}}">{{__('Performance')}}</a>
 
         </div>

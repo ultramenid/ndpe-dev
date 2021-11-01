@@ -67,6 +67,9 @@
                 height : 500,
                 skin: 'snow',
                 icons : 'thin',
+                relative_urls : false,
+                            remove_script_host : false,
+                            convert_urls : true,
                 content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
                 plugins: [
                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
@@ -101,6 +104,9 @@
                     height : 500,
                     skin: 'snow',
                     icons : 'thin',
+                    relative_urls : false,
+                            remove_script_host : false,
+                            convert_urls : true,
                     content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
@@ -134,6 +140,9 @@
                     height : 500,
                     skin: 'snow',
                     icons : 'thin',
+                    relative_urls : false,
+                            remove_script_host : false,
+                            convert_urls : true,
                     content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',

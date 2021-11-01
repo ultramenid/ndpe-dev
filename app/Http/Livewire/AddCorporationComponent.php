@@ -7,11 +7,15 @@ use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Intervention\Image\ImageManager;
+use Illuminate\Support\Str;
+
 
 
 class AddCorporationComponent extends Component
 {
     use WithFileUploads;
+    public $tags = [], $urlfiles = [];
+    public $mediafile, $urlfile;
     public $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2;
 
     public function uploadImage(){
@@ -22,16 +26,45 @@ class AddCorporationComponent extends Component
 
        //http://image.intervention.io/api/fit
        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
-       $image = $manager->make('storage/'.$foto)->fit(200);
+       $image = $manager->make('storage/'.$foto)->resize(240, null, function ($constraint) {
+        $constraint->aspectRatio();
+        });
        $image->save('storage/thumbnail/'.$foto);
        return $foto;
     }
 
+    public function updatedMediafile($mediafile){
 
+        $extension = pathinfo($mediafile->getFilename(), PATHINFO_EXTENSION);
+        if (!in_array($extension, ['png', 'jpeg', 'bmp', 'gif','jpg','webp','pdf','docx','xlsx'])) {
+           $this->reset('mediafile');
+           $message = 'Files not supported';
+           $type = 'error'; //error, success
+           $this->emit('toast',$message, $type);
+        }elseif($mediafile->getSize() > 5097152){
+           $this->reset('mediafile');
+           $message = 'Files must not be greater than 5MB';
+           $type = 'error'; //error, success
+           $this->emit('toast',$message, $type);
+        }else{
+            try {
+                unlink(storage_path('app/public/files/'.$this->mediafile));
+                $file = $this->mediafile->store('public/files/');
+                $foto = $this->mediafile->hashName();
+            } catch (\Throwable $th) {
+                $file = $this->mediafile->store('public/files/');
+                $foto = $this->mediafile->hashName();
+            }
+            $urlfile = asset('storage/files/'.$foto);
+            array_push($this->urlfiles, $urlfile);
+
+        }
+    }
     public function storeCorporate(){
         if($this->manualValidation()){
             DB::table('corporateprofile')->insert([
                 'name' => $this->corporatename,
+                'corporateSLUG' => Str::slug($this->corporatename,'-'),
                 'img' => $this->uploadImage(),
                 'descEN' => $this->descEN,
                 'descID' => $this->descID,
@@ -62,6 +95,7 @@ class AddCorporationComponent extends Component
                 'nilai2' => $this->value2,
                 'created_at' => Carbon::now('Asia/Jakarta')
             ]);
+            redirect()->to('/cms/groups');
         };
 
     }
@@ -74,9 +108,9 @@ class AddCorporationComponent extends Component
             $message = 'Files not supported';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
-         }elseif($photo->getSize() > 2097152){
+         }elseif($photo->getSize() > 5097152){
             $this->reset('photo');
-            $message = 'Files must not be greater than 2MB';
+            $message = 'Files must not be greater than 5MB';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
          }

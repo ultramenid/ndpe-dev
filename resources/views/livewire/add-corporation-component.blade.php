@@ -19,10 +19,10 @@
 
     <div class="max-w-6xl mx-auto px-6 md:px-8  py-8 min-h-screen">
     <div class="grid grid-cols-12 gap-x-4" x-data="{ tabs: 'overview' }">
-        <div class= "sm:col-span-2 col-span-12" >
-            <div class="overflow-x-auto scrollbar-hide whitespace-nowrap  sm:col-span-3 sm:space-y-1  space-y-0 sm:space-x-0  space-x-3  col-span-12 subpixel-antialiased sm:flex sm:flex-col flex flex-row ">
+        <div class= "sm:col-span-3 col-span-12" >
+            <div class="overflow-x-auto  scrollbar-hide whitespace-nowrap  sm:col-span-3  sm:space-x-0  space-x-3  col-span-12 subpixel-antialiased sm:flex sm:flex-col flex flex-row ">
                 {{-- tabs overview --}}
-                <div @click="tabs='overview'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='overview'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'overview' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
@@ -30,7 +30,7 @@
                     >Overview</a>
                 </div>
                 {{-- tabs area --}}
-                <div @click="tabs='area'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='area'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'area' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
@@ -38,7 +38,7 @@
                     >Area</a>
                 </div>
                 {{-- tabs ownership --}}
-                <div @click="tabs='ownership'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='ownership'" class=" mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'ownership' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
@@ -46,7 +46,7 @@
                     >Ownership</a>
                 </div>
                 {{-- tabs financial --}}
-                <div @click="tabs='financial'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='financial'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'financial' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
@@ -54,7 +54,7 @@
                     >Financial</a>
                 </div>
                 {{-- tabs buyer --}}
-                <div @click="tabs='buyer'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='buyer'" class=" mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'buyer' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
@@ -62,16 +62,35 @@
                     >Buyer</a>
                 </div>
                 {{-- tabs performance --}}
-                <div @click="tabs='performance'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                <div @click="tabs='performance'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'performance' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-bold' : tabs === 'perforamance' }"
                     >Performance</a>
                 </div>
+
+            </div>
+            <div class="mt-8 w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6 ">
+                <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Media uploader</h1>
+                <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-4">upload and get url</p>
+                <div class="flex items-center justify-center px-2 py-2 border border-dashed border-gray-400 rounded">
+                    <label class="cursor-pointer">
+                        <p wire:loading.remove wire:target="mediafile" class="text-xs text-center text-gray-400 ">Clik to upload</p>
+                        <input type='file' class="hidden" wire:model='mediafile' accept="" />
+                        <p wire:loading wire:target="mediafile" class="text-xs text-center text-gray-400">Uploding. . . . . </p>
+                    </label>
+                </div>
+
+                    @if ($urlfiles)
+                        <p class="text-newgray-700 dark:text-gray-500  italic text-xs mt-6">file url:</p>
+                        @foreach ($urlfiles as $key => $value)
+                            <a class="break-all inline-flex justify-between  mr-4 mt-2 bg-gray-200 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded py-2 px-2 focus:outline-none items-center"> {{ $value }}</a>
+                        @endforeach
+                    @endif
             </div>
         </div>
-        <div class="sm:col-span-10 col-span-12 " >
+        <div class="sm:col-span-9 col-span-12 " >
             <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                 <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-6">Corporate Name</h1>
                 <input id="btnStore" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='corporatename' placeholder="Name. . . ">

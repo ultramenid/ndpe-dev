@@ -11,4 +11,10 @@ class GroupsController extends Controller
         $nav = 'groups';
         return view('backend.groups', compact('title','nav'));
     }
+    public function edit($id){
+        $title = 'Editing Corporate - Responsible Mining Index';
+        $nav = 'corporates';
+        $id = $id;
+        return view('backend.editcorporate', compact('title','nav', 'id'));
+    }
 }

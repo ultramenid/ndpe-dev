@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AddCorporation;
+use App\Http\Controllers\AddInternal;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CallController;
 use App\Http\Controllers\CorporatesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GroupsController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\InternalController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\SettingsController;
@@ -39,7 +41,7 @@ Route::group(['prefix' => '{lang}'], function () {
     Route::get('/update', [UpdateController::class, 'index'])->name('update');
     Route::get('/performance', [PerformanceController::class, 'index'])->name('performance');
     Route::get('/corporatedetail/djarum', [CorporatesController::class, 'detail'])->name('corporatedetail');
-    Route::get('/article/djarum', [ArticleController::class, 'detail'])->name('article');
+    Route::get('/article/{id}/{slug}', [ArticleController::class, 'detail'])->name('article');
 
 });
 
@@ -51,7 +53,11 @@ Route::group(['middleware' => 'checkSession'], function () {
     Route::get('/cms/settings', [SettingsController::class, 'index']);
     Route::get('/cms/groups', [GroupsController::class, 'index']);
     Route::get('/cms/updates', [UpdatesController::class, 'index']);
+    Route::get('/cms/internal', [InternalController::class, 'index']);
+    Route::get('/cms/addinternal', [AddInternal::class, 'index']);
+    Route::get('/cms/internal/{id}', [InternalController::class, 'edit']);
     Route::get('/cms/addcorporation', [AddCorporation::class, 'index']);
+    Route::get('/cms/corporates/{id}', [GroupsController::class, 'edit']);
 });
 
 

@@ -10,35 +10,18 @@
         @include('partials.nav')
         <div class="max-w-6xl mx-auto relative px-6 py-6">
             <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4 sm:mt-12 sm-6">
-                <div class="col-span-1 flex flex-col ">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595436986_5f186fba23a5a.gif" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
+                @foreach ($internals as $item)
+                    <div class="col-span-1 flex flex-col ">
+                        <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}"><img loading="lazy" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{ $item->title }}" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
 
-                    <p class="text-2xl  text-gray-200 font-notoserif cursor-pointer hover:underline pt-2">Analisis citra: Deforestasi dalam konsesi Djarum Grup di Kaltim</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-gray-200 cursor-pointer">Read More</a>
+                        <p class="text-2xl  text-gray-200 font-notoserif cursor-pointer hover:underline pt-2">{{$item->title}}</p>
+                        <div class="flex flex-wrap mt-auto pt-3">
+                            <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}" class="font-bold text-gray-200 cursor-pointer">Read More</a>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
+                @endforeach
 
-                <div class="col-span-1 flex flex-col ">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595501900_5f196d4c899ab.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center ">
-
-                    <p class="text-2xl text-gray-200 font-notoserif cursor-pointer hover:underline pt-2">Deforestasi di Muara Sungai Landak, konsesi terhubung APP</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-gray-200 cursor-pointer">Read More</a>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-span-1 flex flex-col">
-                    <a href="{{ route('article', [app()->getLocale()]) }}"><img loading="lazy" src="https://pasopati.id/uploads/artikel/1595585064_5f1ab228b5098.jpeg" alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center">
-
-                    <p class="text-2xl text-gray-200 font-notoserif cursor-pointer hover:underline pt-2">Kebijakan land-swap: Setengah hati lindungi gambut & hutan alam</p>
-                    <div class="flex flex-wrap mt-auto pt-3">
-                        <a class="font-bold text-gray-200 cursor-pointer">Read More</a>
-                    </div>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
