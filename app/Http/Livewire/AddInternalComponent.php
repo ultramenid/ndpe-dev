@@ -15,7 +15,7 @@ class AddInternalComponent extends Component
     use WithFileUploads;
     public $publishdate, $contentEN, $tag, $titleEN, $titleID, $titleJP, $descEN, $descID, $descJP, $contentID, $contentJP, $photo;
     public $tags = [], $urlfiles = [];
-    public $mediafile, $urlfile;
+    public $mediafile, $urlfile, $isactive = 1;
 
     public function uploadImage(){
         $file = $this->photo->store('public');
@@ -97,7 +97,7 @@ class AddInternalComponent extends Component
                 'contentEN' => $this->contentEN,
                 'contentID' => $this->contentID,
                 'contentJP' => $this->contentJP,
-                'isActive' => 1,
+                'isActive' => $this->isactive,
                 'slugEN' => Str::slug($this->titleEN,'-'),
                 'slugID' => Str::slug($this->titleID,'-'),
                 'slugJP' => Str::slug($this->titleJP,'-'),

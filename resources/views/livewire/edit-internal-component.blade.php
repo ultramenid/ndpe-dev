@@ -103,6 +103,15 @@
                         @endforeach
                     @endif
                 </div>
+                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6 ">
+                    <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Status</h1>
+                    <label class="w-full"  >
+                        <select wire:model='isactive' class=" mb-6 bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20">
+                            <option value="1">Active</option>
+                            <option value="0">Non Active</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </div>
         <div class="sm:col-span-9 col-span-12 " >
