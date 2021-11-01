@@ -2,7 +2,7 @@
     <livewire:toastr />
     <div class=" border-b border-gray-300 dark:border-opacity-20 ">
         <div class="max-w-6xl mx-auto px-6  flex justify-between  py-16">
-            <h1 class="sm:text-4xl text-xl text-newgray-900 dark:text-newgray-300 font-semibold ">Editing Internal News</h1>
+            <h1 class="sm:text-4xl text-xl text-newgray-900 dark:text-newgray-300 font-semibold ">Editing Updates</h1>
             <div class="z-30">
                 <button wire:loading.remove wire:target='storeInternal'  wire:click='storeInternal' id="btnStore" class="inline-flex sm:px-16 px-8 sm:py-2 py-1 rounded dark:hover:bg-newgray-900 dark:hover:border-gray-200 dark:hover:text-gray-200 hover:bg-white hover:text-newgray-900 border hover:border-newgray-900 bg-newgray-900 dark:bg-gray-100 text-newgray-100 dark:text-newgray-900">
                     Save
@@ -107,8 +107,8 @@
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Status</h1>
                     <label class="w-full"  >
                         <select wire:model='isactive' class=" mb-6 bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20">
-                            <option value="1">Active</option>
-                            <option value="0">Non Active</option>
+                            <option value="1">Publish</option>
+                            <option value="0">Non Publish</option>
                         </select>
                     </label>
                 </div>

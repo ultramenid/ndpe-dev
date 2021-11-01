@@ -72,29 +72,26 @@
 
             {{-- performance sm --}}
             <div class="max-w-6xl mx-auto relative px-6 py-12 text-gray-300 z-20 sm:hidden block"
-                x-data="{djarum:false, musimmas:false, korindo:false, wilmar:false, rge:false, salim:false, sinarmas:false}"
+                x-data="{open: ''}"
                 >
                 <div class="bg-brown-ndpe  px-4 py-6">
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                            @click=" djarum=!djarum, musimmas=false, korindo=false, wilmar=false, rge=false, salim=false, sinarmas=false "
-                            >
+                    @foreach ($corporates as $item)
+                    <div @click="open = '{{$item->id}}'" class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
+                        <div class="flex flex-row items-center space-x-1">
                             <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/Djarum-Logo.png') }}" alt="" class="h-10">
+                                <img src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{$item->name}}" class="h-10">
                             </div>
-                            <p class="font-bold text-xl">Djarum</p>
+                            <p class="font-bold text-xl">{{$item->name}}</p>
                         </div>
 
-                        <div x-show="djarum" x-cloak style="display: none !important">
+                        <div x-show="open === '{{$item->id}}'" x-cloak style="display: none !important">
                             <div class="flex flex-col mt-4">
                                 <div class="flex flex-row px-2">
                                     <div class="w-3/12 flex justify-center"></div>
                                     <div class="flex flex-col ">
                                         <a>Deforestation</a>
                                         <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
+                                            @include('partials.rateDeforestation')
                                         </div>
                                     </div>
                                 </div>
@@ -106,9 +103,7 @@
                                     <div class="flex flex-col ">
                                         <a>Biodiversity Loss</a>
                                         <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
+                                            @include('partials.rateBloss')
                                         </div>
                                     </div>
                                 </div>
@@ -119,9 +114,7 @@
                                     <div class="flex flex-col ">
                                         <a>Peatland Destruction</a>
                                         <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
+                                            @include('partials.ratePeatland')
                                         </div>
                                     </div>
                                 </div>
@@ -132,9 +125,7 @@
                                     <div class="flex flex-col ">
                                         <a>Social Conflict</a>
                                         <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
+                                            @include('partials.rateSocial')
                                         </div>
                                     </div>
                                 </div>
@@ -142,401 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                        @click=" djarum=false, musimmas=!musimmas, korindo=false, wilmar=false, rge=false, salim=false, sinarmas=false "
-                            >
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/MusimMas.png') }}" alt="" class="h-8 w-12">
-                            </div>
-                            <p class="font-bold text-xl">Musim Mas</p>
-                        </div>
-
-                        <div x-show="musimmas" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                            @click=" djarum=false, musimmas=false, korindo=!korindo, wilmar=false, rge=false, salim=false, sinarmas=false "
-                            >
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/Korindo-Logo.png') }}" alt="" class="h-10 w-10">
-                            </div>
-                            <p class="font-bold text-xl">Korindo</p>
-                        </div>
-                        <div x-show="korindo" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-green-ndpe border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe  py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                            @click=" djarum=false, musimmas=false, korindo=false, wilmar=!wilmar, rge=false, salim=false, sinarmas=false "
-                            >
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/Wilmar-Logo.png') }}" alt="" class="h-8 w-12">
-                            </div>
-                            <p class="font-bold text-xl ">Wilmar</p>
-                        </div>
-                        <div x-show="wilmar" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                            @click=" djarum=false, musimmas=false, korindo=false, wilmar=false, rge=!rge, salim=false, sinarmas=false "
-                            >
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/RGE-Logo.png') }}" alt="" class="h-10 w-8">
-                            </div>
-                            <p class="font-bold text-xl">Royal Golden Eagle</p>
-                        </div>
-                        <div x-show="rge" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe   py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                        @click=" djarum=false, musimmas=false, korindo=false, wilmar=false, rge=false, salim=!salim, sinarmas=false ">
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/Salim-Logo.png') }}" alt="" class="h-8 w-12">
-                            </div>
-                            <p class="font-bold text-xl">Salim</p>
-                        </div>
-                        <div x-show="salim" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-yellow-400 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-brown-ndpe border border-green-ndpe  text-ndpe  py-4 px-2 mt-4">
-                        <div class="flex flex-row items-center space-x-1"
-                            @click=" djarum=false, musimmas=false, korindo=false, wilmar=false, rge=false, salim=false, sinarmas=!sinarmas ">
-                            <div class="w-3/12 flex justify-center">
-                                <img src="{{ asset('assets/corporate/Sinarmas-Logo.png') }}" alt="" class="h-10 w-10">
-                            </div>
-                            <p class="font-bold text-xl ">Sinarmas</p>
-                        </div>
-                        <div x-show="sinarmas" x-cloak style="display: none !important">
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Deforestation</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Biodiversity Loss</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Peatland Destruction</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col mt-4">
-                                <div class="flex flex-row px-2">
-                                    <div class="w-3/12 flex justify-center"></div>
-                                    <div class="flex flex-col ">
-                                        <a>Social Conflict</a>
-                                        <div class="flex space-x-1">
-                                            <div class="rounded-full h-4 w-4 bg-red-700 border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                            <div class="rounded-full h-4 w-4 bg-transparet border border-gray-400">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 

@@ -45,23 +45,23 @@
                         <p class="border-b border-gray-300"></p>
                     </div>
                     <div class=" text-center px-6">
-                        <a href="{{ url('/about') }}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">About<a>
+                        <a href="{{ route('about', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('About')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
                     <div class=" text-center px-6">
-                        <a href="{{ url('/call') }}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Call<a>
+                        <a href="{{ route('benchmark', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Benchmark')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
                     <div class=" text-center px-6">
-                        <a href="{{ url('/update') }}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Update<a>
+                        <a href="{{ route('update', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Updates')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
                     <div class=" text-center px-6">
-                        <a href="{{ url('/profile') }}" class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Corporation<a>
+                        <a href="{{ route('corporatedetail', [app()->getLocale()]) }}" class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Groups')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
                     <div class=" text-center px-6">
-                        <a href="{{ url('/tools') }}" class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Performance<a>
+                        <a href="{{ route('performance', app()->getlocale() )}}"class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Performance')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
                 </div>
