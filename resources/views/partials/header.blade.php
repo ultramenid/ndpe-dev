@@ -40,27 +40,27 @@
                 </button>
 
                 <div class="mt-12 space-y-3">
-                    <div class=" text-center px-6">
-                        <a href="{{ url('/') }}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Home<a>
+                    <div class=" px-6">
+                        <a href="{{ route('index', app()->getlocale() )}}"   class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">Home<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
-                    <div class=" text-center px-6">
+                    <div class=" px-6">
                         <a href="{{ route('about', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('About')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
-                    <div class=" text-center px-6">
+                    <div class=" px-6">
                         <a href="{{ route('benchmark', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Benchmark')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
-                    <div class=" text-center px-6">
+                    <div class=" px-6">
                         <a href="{{ route('update', app()->getlocale() )}}"  class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Updates')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
-                    <div class=" text-center px-6">
+                    <div class=" px-6">
                         <a href="{{ route('corporatedetail', [app()->getLocale()]) }}" class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Groups')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
-                    <div class=" text-center px-6">
+                    <div class=" px-6">
                         <a href="{{ route('performance', app()->getlocale() )}}"class="mb-4 px-4 inline-block text-base leading-5 text-gray-300 font-semibold uppercase">{{__('Performance')}}<a>
                         <p class="border-b border-gray-300"></p>
                     </div>
