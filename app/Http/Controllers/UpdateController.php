@@ -23,6 +23,7 @@ class UpdateController extends Controller
         return DB::table('internalnews')
         ->selectRaw($this->getSelectInternal())
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
+        ->where('isActive', 1)
         ->orderBy('publishdate','desc')
         ->limit(3)
         ->get();

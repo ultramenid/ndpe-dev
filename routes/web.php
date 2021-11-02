@@ -13,6 +13,7 @@ use App\Http\Controllers\InternalController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\TagsController;
 use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UpdatesController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,7 @@ Route::group(['prefix' => '{lang}'], function () {
     Route::get('/performance', [PerformanceController::class, 'index'])->name('performance');
     Route::get('/corporatedetail/djarum', [CorporatesController::class, 'detail'])->name('corporatedetail');
     Route::get('/article/{id}/{slug}', [ArticleController::class, 'detail'])->name('article');
+    Route::get('/tags/{tag}', [TagsController::class, 'detail'])->name('tags');
 
 });
 

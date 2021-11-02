@@ -23,11 +23,8 @@
                         {!! $article->content !!}
                     </div>
                 </div>
-                <div class="flex flex-col leading-relaxed">
-                    <a class="hover:underline" href="{{$article->sourceurl}}">{{__('Source :')}} {{$article->sourcename}}</a>
-                </div>
 
-                <div class="flex leading-relaxed items-center mt-4">
+                <div class="flex leading-relaxed items-center ">
                     <div class="leading-relaxed">
                         Tags: &nbsp;
                     </div>
@@ -35,8 +32,12 @@
                         $tags = (explode(",",$article->tags))
                      @endphp
                      @foreach ($tags as $key => $value)
-                         <a class="mr-2 break-all sm:inline-flex hidden justify-between  bg-green-ndpe text-white cursor-pointer rounded mt-1 py-2 px-2 focus:outline-none items-center">{{ $value }}</a>
+                         <a href="{{ route('tags', [app()->getLocale(),  $value]) }}" class="mr-2 break-all sm:inline-flex hidden justify-between  bg-green-ndpe text-white cursor-pointer rounded mt-1 py-2 px-2 focus:outline-none items-center">{{ $value }}</a>
                      @endforeach
+                </div>
+
+                <div class="flex flex-col leading-relaxed mt-4">
+                    <a class=" text-3xl hover:underline" href="{{$article->sourceurl}}">{{__('Source :')}} {{$article->sourcename}}</a>
                 </div>
             </div>
 

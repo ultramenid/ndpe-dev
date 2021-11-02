@@ -20,6 +20,8 @@ class EditInternalComponent extends Component
         $this->idinternal = $idinternalnews;
         $data = DB::table('internalnews')->where('id', $idinternalnews)->first();
         $this->uphoto = $data->img;
+        $this->sourcename = $data->sourcename;
+        $this->sourceurl = $data->sourceurl;
         $this->publishdate = $data->publishdate;
         $this->tags = explode(',', $data->tags);
         $this->titleEN = $data->titleEN;
