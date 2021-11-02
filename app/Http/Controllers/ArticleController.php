@@ -11,11 +11,11 @@ class ArticleController extends Controller
 {
     public function getSelectInternal(){
         if (App::getLocale() == 'id') {
-            return 'id, titleID as title, slugID as slug, img, descID as description, contentID as content, tags';
+            return 'id, titleID as title, slugID as slug, img, descID as description, contentID as content, tags, sourcename, sourceurl';
         }elseif(App::getLocale() == 'jp'){
-            return 'id, titleJP as title, slugJP as slug, img, descJP as description, contentJP as content, tags';
+            return 'id, titleJP as title, slugJP as slug, img, descJP as description, contentJP as content, tags, sourcename, sourceurl';
         }else{
-            return 'id, titleEN as title, slugEN as slug, img, descEN as description, contentEN as content, tags';
+            return 'id, titleEN as title, slugEN as slug, img, descEN as description, contentEN as content, tags, sourcename, sourceurl';
         }
     }
 

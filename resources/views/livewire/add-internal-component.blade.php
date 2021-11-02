@@ -35,6 +35,17 @@
                 </label>
             </div>
         </div>
+        <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+            <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Source</h1>
+            <div class="flex flex-col">
+                <p class="text-newgray-700 dark:text-gray-500  italic text-xs">Name :</p>
+                <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='sroucename' placeholder="Source name. . . ">
+            </div>
+            <div class="flex flex-col mt-4">
+                <p class="text-newgray-700 dark:text-gray-500  italic text-xs">url :</p>
+                <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='sourceurl' placeholder="Source url. . . ">
+            </div>
+        </div>
         <div  class="overflow-x-auto scrollbar-hide whitespace-nowrap   subpixel-antialiased flex mb-6 justify-end">
             {{-- tabs english --}}
             <div @click="tabs='english'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
@@ -83,7 +94,7 @@
                         @endforeach
                     </div>
 
-                    <input type="text" class=" mt-4 bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:keydown.enter="addTags" wire:model='tag' placeholder="Tag. . .">
+                    <input type="text" class=" mt-4 bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:keydown.enter="addTags" wire:model.defer='tag' placeholder="Tag. . .">
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6 ">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Media uploader</h1>

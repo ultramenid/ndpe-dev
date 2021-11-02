@@ -23,6 +23,21 @@
                         {!! $article->content !!}
                     </div>
                 </div>
+                <div class="flex flex-col leading-relaxed">
+                    <a class="hover:underline" href="{{$article->sourceurl}}">{{__('Source :')}} {{$article->sourcename}}</a>
+                </div>
+
+                <div class="flex leading-relaxed items-center mt-4">
+                    <div class="leading-relaxed">
+                        Tags: &nbsp;
+                    </div>
+                    <a>@php
+                        $tags = (explode(",",$article->tags))
+                     @endphp
+                     @foreach ($tags as $key => $value)
+                         <a class="mr-2 break-all sm:inline-flex hidden justify-between  bg-green-ndpe text-white cursor-pointer rounded mt-1 py-2 px-2 focus:outline-none items-center">{{ $value }}</a>
+                     @endforeach
+                </div>
             </div>
 
             <div class="max-w-4xl mx-auto relative mt-12">

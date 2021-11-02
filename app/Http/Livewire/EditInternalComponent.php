@@ -13,7 +13,7 @@ class EditInternalComponent extends Component
 {
     use WithFileUploads;
     public $tags = [], $urlfiles = [];
-    public $mediafile, $urlfile,$idinternal, $isactive;
+    public $mediafile, $urlfile,$idinternal, $isactive, $sourcename, $sourceurl;
     public $publishdate, $contentEN, $tag, $titleEN, $titleID, $titleJP, $descEN, $descID, $descJP, $contentID, $contentJP,$uphoto, $photo;
 
     public function mount($idinternalnews){
@@ -122,6 +122,8 @@ class EditInternalComponent extends Component
                 'publishdate' => $this->publishdate,
                 'tags' => $this->getTags(),
                 'img' => $name,
+                'sourcename' => $this->sourcename,
+                'sourceurl' => $this->sourceurl,
                 'titleEN' => $this->titleEN,
                 'titleID' => $this->titleID,
                 'titleJP' => $this->titleJP,
@@ -162,6 +164,16 @@ class EditInternalComponent extends Component
             return;
         }elseif($this->titleEN == ''){
             $message = 'Title english is required';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
+        }elseif($this->sourcename == ''){
+            $message = 'Source name is required';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
+        }elseif($this->sourceurl == ''){
+            $message = 'Source url is required';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;

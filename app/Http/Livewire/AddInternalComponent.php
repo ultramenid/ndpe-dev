@@ -15,7 +15,7 @@ class AddInternalComponent extends Component
     use WithFileUploads;
     public $publishdate, $contentEN, $tag, $titleEN, $titleID, $titleJP, $descEN, $descID, $descJP, $contentID, $contentJP, $photo;
     public $tags = [], $urlfiles = [];
-    public $mediafile, $urlfile, $isactive = 1;
+    public $mediafile, $urlfile, $isactive = 1, $sourcename, $sourceurl;
 
     public function uploadImage(){
         $file = $this->photo->store('public');
@@ -88,6 +88,8 @@ class AddInternalComponent extends Component
                 'publishdate' => $this->publishdate,
                 'tags' => $this->getTags(),
                 'img' => $this->uploadImage(),
+                'sourcename' => $this->sourcename,
+                'sourceurl' => $this->sourceurl,
                 'titleEN' => $this->titleEN,
                 'titleID' => $this->titleID,
                 'titleJP' => $this->titleJP,
@@ -124,6 +126,16 @@ class AddInternalComponent extends Component
             return;
         }elseif($this->titleEN == ''){
             $message = 'Title english is required';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
+        }elseif($this->sourcename == ''){
+            $message = 'Source name is required';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
+        }elseif($this->sourceurl == ''){
+            $message = 'Source url is required';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
