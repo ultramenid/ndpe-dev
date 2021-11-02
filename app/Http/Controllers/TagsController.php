@@ -19,7 +19,12 @@ class TagsController extends Controller
         }
     }
     public function getTags($tag){
-        return DB::select("select ".$this->getSelectInternal() ." from internalnews where CONCAT(',', tags, ',') like '%,".$tag.",%' and publishdate <= '".Carbon::now('Asia/Jakarta')."' and isActive = 1;");
+        try{
+           $tag =  DB::select("select ".$this->getSelectInternal() ." from internalnews where CONCAT(',', tags, ',') like '%,".$tag.",%' and publishdate <= '".Carbon::now('Asia/Jakarta')."' and isActive = 1;");
+        } catch (\Throwable $th) {
+            $tag = [];
+        }
+        return $tag;
     }
     public function detail($lang, $tag){
         $tag = $tag;

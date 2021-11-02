@@ -30,30 +30,45 @@ class ArticleController extends Controller
     }
 
     public function getContentInternal($id){
-        return DB::table('internalnews')
-        ->selectRaw($this->getSelectInternal())
-        ->where('id', $id)
-        ->first();
+        try{
+            $article = DB::table('internalnews')
+                ->selectRaw($this->getSelectInternal())
+                ->where('id', $id)
+                ->first();
+          } catch (\Throwable $th) {
+              $article = [
+                  'title' => 'Title'
+              ];
+          }
+          return $article;
     }
 
     public function getRelatedInternal($id){
-        return DB::table('internalnews')
-        ->selectRaw($this->getSelectRelatedInternal())
-        ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
-        ->where('isActive', 1)
-        ->where('id', '!=' , $id)
-        ->orderBy('publishdate','desc')
-        ->limit(3)
-        ->get();
+        try{
+           $article= DB::table('internalnews')
+            ->selectRaw($this->getSelectRelatedInternal())
+            ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
+            ->where('isActive', 1)
+            ->where('id', '!=' , $id)
+            ->orderBy('publishdate','desc')
+            ->limit(3)
+            ->get();
+         } catch (\Throwable $th) {
+             $article = [];
+         }
+         return $article;
     }
 
     public function detail($lang,$id, $slug){
+        if(!$this->getContentInternal($id)){
+           return redirect()->route('update', app()->getlocale() );
+        }
         $relatedinternal = $this->getRelatedInternal($id);
         $id = $id;
         $lang = $lang;
         $slug = $slug;
         $article = $this->getContentInternal($id);
-        $title = $this->getContentInternal($id)->title;
+        $title = $this->getContentInternal($id)->title  ;
         $nav = 'updates';
         return view('frontend.article', compact('title', 'nav','id', 'slug', 'article','relatedinternal'));
     }
