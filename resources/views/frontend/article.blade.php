@@ -19,7 +19,7 @@
 
             <div class="max-w-3xl mx-auto relative mt-12">
                 <div class="flex flex-row justify-between space-x-20">
-                    <div class="font-light prose max-w-none leading-relaxed">
+                    <div class=" prose max-w-none leading-relaxed">
                         {!! $article->content !!}
                     </div>
                 </div>

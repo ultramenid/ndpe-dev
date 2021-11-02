@@ -68,7 +68,7 @@ class ArticleController extends Controller
         $lang = $lang;
         $slug = $slug;
         $article = $this->getContentInternal($id);
-        $title = $this->getContentInternal($id)->title  ;
+        $title = $this->getContentInternal($id)->title;
         $nav = 'updates';
         return view('frontend.article', compact('title', 'nav','id', 'slug', 'article','relatedinternal'));
     }
