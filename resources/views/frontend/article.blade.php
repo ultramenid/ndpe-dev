@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="flex flex-col leading-relaxed mt-4">
-                    <a class=" text-3xl hover:underline" href="{{$article->sourceurl}}">{{__('Source :')}} {{$article->sourcename}}</a>
+                    <a class=" hover:underline" href="{{$article->sourceurl}}">{{__('Source :')}} {{$article->sourcename}}</a>
                 </div>
             </div>
 

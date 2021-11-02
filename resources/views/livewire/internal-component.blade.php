@@ -31,13 +31,20 @@
                                     </svg>
                                 </div>
                             </th>
-                            <th class="px-4 py-3 bg-gray-50 dark:bg-opacity-10  dark:text-white text-left text-xs font-medium text-gray-500 uppercase tracking-wider  sm:w-4/12 w-0">
+                            <th class="px-4 py-3 bg-gray-50 dark:bg-opacity-10  dark:text-white text-left text-xs font-medium text-gray-500 uppercase tracking-wider  sm:w-3/12 w-0">
                                 <a class="hidden sm:block">Tags</a>
                             </th>
-                            <th class="px-4 py-3 bg-gray-50 dark:bg-opacity-10  dark:text-white text-left text-xs font-medium text-gray-500 uppercase tracking-wider  sm:w-3/12 w-0">
+                            <th class="px-4 py-3 bg-gray-50 dark:bg-opacity-10  dark:text-white text-left text-xs font-medium text-gray-500 uppercase tracking-wider  sm:w-2/12 w-0">
                                 <a class="hidden sm:block">Images</a>
                             </th>
-
+                            <th wire:click='sortingField("isActive")' class="cursor-pointer px-4 py-3 bg-gray-50 dark:bg-opacity-10  dark:text-white text-left text-xs font-medium text-gray-500 uppercase tracking-wider  sm:w-2/12 w-0">
+                                <div class="flex space-x-1">
+                                    <a class="hidden sm:block">Status</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                                     </svg>
+                                 </div>
+                            </th>
                             <th class=" text-right bg-gray-50 dark:bg-opacity-10  dark:text-white text-xs font-medium text-gray-500 uppercase tracking-wider w-1/12">
 
                             </th>
@@ -55,7 +62,7 @@
                                    $tags = (explode(",",$item->tags))
                                 @endphp
                                 @foreach ($tags as $key => $value)
-                                    <a class="break-all sm:inline-flex hidden justify-between  bg-gray-50 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded mt-1 py-2 px-2 focus:outline-none items-center"> {{ $value }}</a>
+                                    <a class="break-all sm:inline-flex hidden justify-between  bg-gray-200 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded mt-1 py-2 px-2 focus:outline-none items-center"> {{ $value }}</a>
                                 @endforeach
                             </td>
                             <td class="px-2 py-4 break-words text-sm font-bold text-newgray-700 dark:text-gray-300  ">
@@ -64,7 +71,14 @@
                                 </div>
 
                             </td>
-
+                            <td class=" py-4 break-words text-sm font-bold text-newgray-700 dark:text-gray-300">
+                                
+                                    @if( $item->isActive == 1)
+                                        <a class="break-all sm:inline-flex hidden justify-between  bg-gray-200 dark:bg-newgray-700 text-green-800 rounded mt-1 py-2 px-2 focus:outline-none items-center">Published</a>
+                                    @else
+                                        <a class="break-all sm:inline-flex hidden justify-between  bg-gray-200 dark:bg-newgray-700 text-red-800 rounded mt-1 py-2 px-2 focus:outline-none items-center">Unpublish</a>
+                                    @endif
+                            </td>
                             <td colspan="2" class=" break-words text-sm text-gray-500 dark:text-gray-300 px-6">
                                 <div class="relative flex justify-end" x-data="{ open: false }">
 

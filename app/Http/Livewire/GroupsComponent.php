@@ -45,6 +45,7 @@ class GroupsComponent extends Component
         $sc = '%' . $this->search . '%';
         try {
             return  DB::table('corporateprofile')
+                        ->select('id', 'name')
                         ->where('name', 'like', $sc)
                         ->orderBy($this->dataField, $this->dataOrder)
                         ->paginate($this->paginate);

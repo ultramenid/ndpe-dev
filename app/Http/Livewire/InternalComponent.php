@@ -20,6 +20,7 @@ class InternalComponent extends Component
         $sc = '%' . $this->search . '%';
         try {
             return  DB::table('internalnews')
+                        ->select('id', 'titleEN', 'tags', 'img', 'isActive')
                         ->where('titleEN', 'like', $sc)
                         ->orderBy($this->dataField, $this->dataOrder)
                         ->paginate($this->paginate);
