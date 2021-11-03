@@ -14,7 +14,7 @@
     {{-- content --}}
     <div class="bg-brown-ndpe py-12">
         <div class="max-w-6xl mx-auto  px-6">
-            <h1 class="font-notoserif text-ndpe text-4xl sm:px-0 px-4">Corporation</h1>
+            <h1 class="font-notoserif text-ndpe text-4xl sm:px-0 px-4">{{__('Groups')}}</h1>
             <div class="sm:w-6/12  w-full text-ndpe mt-6">
                 <p class="sm:px-0 px-4">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
             </div>
@@ -61,15 +61,8 @@
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
                                 <a href="#"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
-                                <p class="text-xs mb-6">{{$item->description}}
+                                <p class="text-xs mb-6 leading-relaxed">{{$item->description}}
                                 </p>
-                                <div class="flex flex-col space-y-2">
-                                    <a href="#" class="font-semibold underline text-xs">Supply Chain Footprints & Key Issues</a>
-                                    <a href="#" class="font-semibold underline text-xs">NGO Evaluation of NDPE Performance</a>
-                                    <a href="#" class="font-semibold underline text-xs">Other Deforestation Risk Commodities</a>
-                                    <a href="#" class="font-semibold underline text-xs">Buyers & Investors</a>
-                                    <a href="#" class="font-semibold underline text-xs">References</a>
-                                </div>
                             </div>
                         </div>
                     @endforeach

@@ -138,8 +138,8 @@ class AddCorporationComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->descEN) > 160){
-            $message = 'Description english max limit 160 character';
+        }elseif(strlen($this->descEN) > 350){
+            $message = 'Description english max limit 350 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -148,8 +148,8 @@ class AddCorporationComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->descID) > 160){
-            $message = 'Description indonesia max limit 160 character';
+        }elseif(strlen($this->descID) > 350){
+            $message = 'Description indonesia max limit 350 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -158,8 +158,8 @@ class AddCorporationComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->descJP) > 160){
-            $message = 'Description japan max limit 160 character';
+        }elseif(strlen($this->descJP) > 350){
+            $message = 'Description japan max limit 350 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;

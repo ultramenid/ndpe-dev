@@ -20,7 +20,7 @@ class IndexController extends Controller
     }
 
     public function getContentInternal(){
-        return DB::table('internalnews')
+        return DB::table('eksternalnews')
         ->selectRaw($this->getSelectInternal())
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
         ->where('isActive', 1)

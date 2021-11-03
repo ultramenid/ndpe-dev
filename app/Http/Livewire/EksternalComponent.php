@@ -11,7 +11,7 @@ class EksternalComponent extends Component
     use WithPagination;
     public $deleter = false;
     public $deleteName, $deleteID;
-    public $dataField = 'titleEN', $dataOrder = 'asc', $paginate = 10, $search = '';
+    public $dataField = 'titleEN', $dataOrder = 'asc', $paginate = 2, $search = '';
     public function sortingField($field){
         $this->dataField = $field;
         $this->dataOrder = $this->dataOrder == 'asc' ? 'desc' : 'asc';
