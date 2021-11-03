@@ -44,9 +44,9 @@ class EditInternalComponent extends Component
            $message = 'Files not supported';
            $type = 'error'; //error, success
            $this->emit('toast',$message, $type);
-        }elseif($mediafile->getSize() > 5097152){
+        }elseif($mediafile->getSize() > 8097152){
            $this->reset('mediafile');
-           $message = 'Files must not be greater than 5MB';
+           $message = 'Files must not be greater than 8MB';
            $type = 'error'; //error, success
            $this->emit('toast',$message, $type);
         }else{
@@ -72,9 +72,9 @@ class EditInternalComponent extends Component
             $message = 'Files not supported';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
-         }elseif($photo->getSize() > 5097152){
+         }elseif($photo->getSize() > 8097152){
             $this->reset('photo');
-            $message = 'Files must not be greater than 5MB';
+            $message = 'Files must not be greater than 8MB';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
          }
@@ -210,7 +210,7 @@ class EditInternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descEN) > 160){
-            $message = 'Description english max limit 60 character';
+            $message = 'Description english max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -220,7 +220,7 @@ class EditInternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descID) > 160){
-            $message = 'Description indonesia max limit 60 character';
+            $message = 'Description indonesia max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -230,7 +230,7 @@ class EditInternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descJP) > 160){
-            $message = 'Description japan max limit 60 character';
+            $message = 'Description japan max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;

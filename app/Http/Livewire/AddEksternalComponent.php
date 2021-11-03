@@ -107,8 +107,8 @@ class AddEksternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->titleEN) > 60){
-            $message = 'Title english max limit 60 character';
+        }elseif(strlen($this->titleEN) > 120){
+            $message = 'Title english max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -117,8 +117,8 @@ class AddEksternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->titleID) > 60){
-            $message = 'Title indonesia max limit 60 character';
+        }elseif(strlen($this->titleID) > 120){
+            $message = 'Title indonesia max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -127,8 +127,8 @@ class AddEksternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->titleJP) > 60){
-            $message = 'Title japan max limit 60 character';
+        }elseif(strlen($this->titleJP) > 120){
+            $message = 'Title japan max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -138,7 +138,7 @@ class AddEksternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descEN) > 160){
-            $message = 'Description english max limit 60 character';
+            $message = 'Description english max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -148,7 +148,7 @@ class AddEksternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descID) > 160){
-            $message = 'Description indonesia max limit 60 character';
+            $message = 'Description indonesia max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -158,7 +158,7 @@ class AddEksternalComponent extends Component
             $this->emit('toast',$message, $type);
             return;
         }elseif(strlen($this->descJP) > 160){
-            $message = 'Description japan max limit 60 character';
+            $message = 'Description japan max limit 160 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;

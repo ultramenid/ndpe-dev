@@ -41,9 +41,9 @@ class AddCorporationComponent extends Component
            $message = 'Files not supported';
            $type = 'error'; //error, success
            $this->emit('toast',$message, $type);
-        }elseif($mediafile->getSize() > 5097152){
+        }elseif($mediafile->getSize() > 8097152){
            $this->reset('mediafile');
-           $message = 'Files must not be greater than 5MB';
+           $message = 'Files must not be greater than 8MB';
            $type = 'error'; //error, success
            $this->emit('toast',$message, $type);
         }else{
@@ -108,9 +108,9 @@ class AddCorporationComponent extends Component
             $message = 'Files not supported';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
-         }elseif($photo->getSize() > 5097152){
+         }elseif($photo->getSize() > 8097152){
             $this->reset('photo');
-            $message = 'Files must not be greater than 5MB';
+            $message = 'Files must not be greater than 8MB';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
          }
