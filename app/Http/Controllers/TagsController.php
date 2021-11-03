@@ -20,7 +20,7 @@ class TagsController extends Controller
     }
     public function getTags($tag){
         try{
-           $tag =  DB::select("select ".$this->getSelectInternal() ." from eksternalnews where CONCAT(',', tags, ',') like '%,".$tag.",%' and publishdate <= '".Carbon::now('Asia/Jakarta')."' and isActive = 1;");
+           $tag =  DB::select("select ".$this->getSelectInternal() ." from eksternalnews where CONCAT(',', tags, ',') like '%,".$tag.",%' and publishdate <= '".Carbon::now('Asia/Jakarta')."' and isActive = 1 order by publishdate DESC;");
         } catch (\Throwable $th) {
             $tag = [];
         }
