@@ -85,7 +85,7 @@
             <div x-show="tabs==='english'" x-cloak style="display: none !important">
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
+                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 120 character</p>
                     <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleEN' placeholder="Title. . . ">
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
@@ -99,7 +99,7 @@
             <div x-show="tabs==='indonesia'" x-cloak style="display: none !important">
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
+                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 120 character</p>
                     <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleID' placeholder="Title. . . ">
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
@@ -113,7 +113,7 @@
             <div x-show="tabs==='japan'" x-cloak style="display: none !important">
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
+                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 120 character</p>
                     <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleJP' placeholder="Title. . . ">
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
