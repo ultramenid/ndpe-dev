@@ -61,7 +61,7 @@ class PagesBenchmarkComponent extends Component
                 ]
             );
         //passing to toast
-        $message = 'Successfully updating page about';
+        $message = 'Successfully updating page benchmark';
         $type = 'success'; //error, success
         $this->emit('toast',$message, $type);
         }
