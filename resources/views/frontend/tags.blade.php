@@ -11,27 +11,27 @@
     </div>
     <div class="bg-ndpe-profile min-h-screen">
         <div class="max-w-6xl mx-auto relative px-6 py-6">
-            <div class="border-b border-white mt-20 py-6 mb-4">
+            <div class="border-b border-white sm:mt-6 mt-2  mb-4 py-6">
                 <h1 class="text-6xl text-white text-center ">TAG: {{$tag}}</h1>
             </div>
             @foreach ($tags as $item)
-            <div class="mt-4">
+            <div class="sm:mt-4 mt-0">
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
                         <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
-                        <div class="flex mt-4 space-x-2 items-center">
-                            <a href="{{$item->sourceurl}}" class="cursor-pointer text-gray-300 hover:underline text-sm">{{$item->sourcename}}</a>
-                            <div class="border-r border-green-ndpe-2 h-6"></div>
-                            <div class="flex justify-between space-x-2 text-sm">
+                        <div class="flex mt-4 sm:flex-row flex-col sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 sm:items-center">
+                            <a href="{{$item->sourceurl}}"  class="cursor-pointer text-gray-300 hover:underline text-sm text-left">{{$item->sourcename}}</a>
+                            <div class="border-r border-green-ndpe-2 h-6 sm:block hidden"></div>
+                            <div class="flex flex-wrap  justify-between sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 text-sm">
                                 @php
-                                    $tags = (explode(",",$item->tags))
-                                @endphp
-                                @foreach ($tags as $tag)
-                                    <a href="{{ route('tags', [app()->getLocale(),  $tag]) }}"  class="cursor-pointer text-white px-2 py-2 underline bg-green-ndpe">{{$tag}}</a>
-                                @endforeach
+                                $tags = (explode(",",$item->tags))
+                            @endphp
+                            @foreach ($tags as $tag)
+                                <a href="{{ route('tags', [app()->getLocale(),  $tag]) }}"  class="cursor-pointer text-white px-2 py-2 underline bg-green-ndpe">{{$tag}}</a>
+                            @endforeach
                             </div>
                         </div>
                     </div>
