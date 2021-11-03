@@ -2,15 +2,19 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AddCorporation;
+use App\Http\Controllers\AddEksternal;
 use App\Http\Controllers\AddInternal;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CallController;
 use App\Http\Controllers\CorporatesController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EksternalController;
 use App\Http\Controllers\GroupsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\InternalController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PagesAboutController;
+use App\Http\Controllers\PagesBenchmarkController;
 use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TagsController;
@@ -29,7 +33,7 @@ use Illuminate\Support\Facades\URL;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//https force https
+// //https force https
 URL::forceScheme('https');
 
 Route::redirect('/', '/en');
@@ -56,10 +60,15 @@ Route::group(['middleware' => 'checkSession'], function () {
     Route::get('/cms/groups', [GroupsController::class, 'index']);
     Route::get('/cms/updates', [UpdatesController::class, 'index']);
     Route::get('/cms/internal', [InternalController::class, 'index']);
+    Route::get('/cms/eksternal', [EksternalController::class, 'index']);
     Route::get('/cms/addinternal', [AddInternal::class, 'index']);
+    Route::get('/cms/addeksternal', [AddEksternal::class, 'index']);
     Route::get('/cms/internal/{id}', [InternalController::class, 'edit']);
+    Route::get('/cms/eksternal/{id}', [EksternalController::class, 'edit']);
     Route::get('/cms/addcorporation', [AddCorporation::class, 'index']);
     Route::get('/cms/corporates/{id}', [GroupsController::class, 'edit']);
+    Route::get('/cms/abouts', [PagesAboutController::class, 'index']);
+    Route::get('/cms/benchmarks', [PagesBenchmarkController::class, 'index']);
 });
 
 

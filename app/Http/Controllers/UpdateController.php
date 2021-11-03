@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class UpdateController extends Controller
 {
-    public function getSelectInternal(){
+    public function getSelecteksternal(){
         if (App::getLocale() == 'id') {
             return 'id, titleID as title, slugID as slug, img, publishdate, sourcename,sourceurl, descID as description, tags';
         }elseif(App::getLocale() == 'jp'){
@@ -19,9 +19,9 @@ class UpdateController extends Controller
         }
     }
 
-    public function getContentInternal(){
-        return DB::table('internalnews')
-        ->selectRaw($this->getSelectInternal())
+    public function getContenteksternal(){
+        return DB::table('eksternalnews')
+        ->selectRaw($this->getSelecteksternal())
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
         ->where('isActive', 1)
         ->orderBy('publishdate','desc')
@@ -31,15 +31,15 @@ class UpdateController extends Controller
 
     public function setHighlight(){
         $items = [];
-        foreach($this->getContentInternal() as $item){
+        foreach($this->getContenteksternal() as $item){
             array_push($items, $item->id);
         }
         return $items;
     }
 
-    public function getAnotherInternal(){
-        return DB::table('internalnews')
-        ->selectRaw($this->getSelectInternal())
+    public function getAnothereksternal(){
+        return DB::table('eksternalnews')
+        ->selectRaw($this->getSelecteksternal())
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
         ->where('isActive', 1)
         ->whereNotIn('id', $this->setHighlight())
@@ -50,11 +50,11 @@ class UpdateController extends Controller
 
     public function index(){
 
-        // dd($this->getAnotherInternal());
+        // dd($this->getAnothereksternal());
         $title = 'Update - NDPE Transparency Platform';
-        $anotherUpdate = $this->getAnotherInternal();
-        $internals = $this->getContentInternal();
+        $anotherUpdate = $this->getAnothereksternal();
+        $eksternals = $this->getContenteksternal();
         $nav = 'update';
-        return view('frontend.update', compact('title', 'nav', 'internals','anotherUpdate'));
+        return view('frontend.update', compact('title', 'nav', 'eksternals','anotherUpdate'));
     }
 }
