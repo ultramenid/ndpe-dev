@@ -25,7 +25,6 @@ class UpdateController extends Controller
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
         ->where('isActive', 1)
         ->orderBy('publishdate','desc')
-        ->limit(3)
         ->get();
     }
 
@@ -44,7 +43,6 @@ class UpdateController extends Controller
         ->where('isActive', 1)
         ->whereNotIn('id', $this->setHighlight())
         ->orderBy('publishdate','desc')
-        ->limit(3)
         ->get();
     }
 
