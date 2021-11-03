@@ -115,8 +115,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -157,8 +157,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -199,8 +199,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -245,8 +245,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -287,8 +287,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -329,8 +329,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -374,8 +374,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -416,8 +416,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -458,8 +458,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -503,8 +503,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -545,8 +545,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -587,8 +587,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -632,8 +632,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -674,8 +674,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
@@ -716,8 +716,8 @@
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
-                                        toolbar: 'fullscreen preview bold italic underline strikethrough  fontselect fontsizeselect formatselect  bold italic forecolor|bullist numlist alignleft aligncenter alignright alignjustify | ' +
-                                        'bullist numlist outdent indent | link image | print  media  | ' +
+                                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                                        ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
