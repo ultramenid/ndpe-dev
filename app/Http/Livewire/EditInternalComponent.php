@@ -13,15 +13,13 @@ class EditInternalComponent extends Component
 {
     use WithFileUploads;
     public $tags = [], $urlfiles = [];
-    public $mediafile, $urlfile,$idinternal, $isactive, $sourcename, $sourceurl;
+    public $mediafile, $urlfile,$idinternal, $isactive;
     public $publishdate, $contentEN, $tag, $titleEN, $titleID, $titleJP, $descEN, $descID, $descJP, $contentID, $contentJP,$uphoto, $photo;
 
     public function mount($idinternalnews){
         $this->idinternal = $idinternalnews;
         $data = DB::table('internalnews')->where('id', $idinternalnews)->first();
         $this->uphoto = $data->img;
-        $this->sourcename = $data->sourcename;
-        $this->sourceurl = $data->sourceurl;
         $this->publishdate = $data->publishdate;
         $this->tags = explode(',', $data->tags);
         $this->titleEN = $data->titleEN;
@@ -124,8 +122,6 @@ class EditInternalComponent extends Component
                 'publishdate' => $this->publishdate,
                 'tags' => $this->getTags(),
                 'img' => $name,
-                'sourcename' => $this->sourcename,
-                'sourceurl' => $this->sourceurl,
                 'titleEN' => $this->titleEN,
                 'titleID' => $this->titleID,
                 'titleJP' => $this->titleJP,
@@ -169,18 +165,8 @@ class EditInternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif($this->sourcename == ''){
-            $message = 'Source name is required';
-            $type = 'error'; //error, success
-            $this->emit('toast',$message, $type);
-            return;
-        }elseif($this->sourceurl == ''){
-            $message = 'Source url is required';
-            $type = 'error'; //error, success
-            $this->emit('toast',$message, $type);
-            return;
-        }elseif(strlen($this->titleEN) > 60){
-            $message = 'Title english max limit 60 character';
+        }elseif(strlen($this->titleEN) > 120){
+            $message = 'Title english max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -189,8 +175,8 @@ class EditInternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->titleID) > 60){
-            $message = 'Title indonesia max limit 60 character';
+        }elseif(strlen($this->titleID) > 120){
+            $message = 'Title indonesia max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
@@ -199,8 +185,8 @@ class EditInternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
-        }elseif(strlen($this->titleJP) > 60){
-            $message = 'Title japan max limit 60 character';
+        }elseif(strlen($this->titleJP) > 120){
+            $message = 'Title japan max limit 120 character';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;

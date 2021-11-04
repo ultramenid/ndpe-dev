@@ -143,6 +143,16 @@ class EditEksternalComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
+        }elseif(strlen($this->sourcename) > 60){
+            $message = 'Source name max limit 60 character';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
+        }elseif(strlen($this->sourceurl) > 255){
+            $message = 'Source url max limit 255 character';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
         }elseif(strlen($this->titleEN) > 120){
             $message = 'Title english max limit 120 character';
             $type = 'error'; //error, success

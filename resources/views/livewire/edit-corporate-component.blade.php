@@ -90,9 +90,12 @@
             </div>
         </div>
         <div class="sm:col-span-9 col-span-12 " >
-            <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+            <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($corporatename)}}}">
                 <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-6">Corporate Name</h1>
-                <input id="btnStore" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='corporatename' placeholder="Name. . . ">
+                <input maxlength="60" x-ref="countme" x-on:keyup="count = $refs.countme.value.length" id="btnStore" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='corporatename' placeholder="Name. . . ">
+                <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs mt-2">
+                    <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                  </div>
             </div>
             {{-- overview --}}
             @include('partials.overviewFormEdit')

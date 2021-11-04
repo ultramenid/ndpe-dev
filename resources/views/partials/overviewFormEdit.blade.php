@@ -38,12 +38,27 @@
         </div>
         <div x-show="open" x-cloak style="display: none !important" class="mt-6">
 
-            <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">English:</h2>
-            <textarea   rows="6"  wire:model.defer='descEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20 mb-4" placeholder="Description. . ."></textarea>
-            <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Indonesia:</h2>
-            <textarea   rows="6"  wire:model.defer='descID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
-            <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Japan:</h2>
-            <textarea   rows="6"  wire:model.defer='descJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+            <div x-data="{count:{{strlen($descEN)}}}" class="mb-6">
+                <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">English:</h2>
+                <textarea maxlength="350" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                    <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                  </div>
+            </div>
+            <div x-data="{count:{{strlen($descID)}}}" class="mb-6">
+                <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Indonesia:</h2>
+                <textarea maxlength="350" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                    <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                  </div>
+            </div>
+            <div x-data="{count:{{strlen($descJP)}}}" class="mb-6">
+                <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Japan:</h2>
+                <textarea maxlength="350" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                    <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                  </div>
+            </div>
         </div>
     </div>
 

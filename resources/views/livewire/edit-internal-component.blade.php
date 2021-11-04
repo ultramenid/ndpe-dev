@@ -35,17 +35,6 @@
                 </label>
             </div>
         </div>
-        <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
-            <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Source</h1>
-            <div class="flex flex-col">
-                <p class="text-newgray-700 dark:text-gray-500  italic text-xs">Name :</p>
-                <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='sourcename' placeholder="Source name. . . ">
-            </div>
-            <div class="flex flex-col mt-4">
-                <p class="text-newgray-700 dark:text-gray-500  italic text-xs">url :</p>
-                <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='sourceurl' placeholder="Source url. . . ">
-            </div>
-        </div>
         <div  class="overflow-x-auto scrollbar-hide whitespace-nowrap   subpixel-antialiased flex mb-6 justify-end">
             {{-- tabs english --}}
             <div @click="tabs='english'" class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
@@ -130,16 +119,20 @@
 
             {{-- tab english --}}
             <div x-show="tabs==='english'" x-cloak style="display: none !important">
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
-                    <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
-                    <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleEN' placeholder="Title. . . ">
-                </div>
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
-                    <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Description</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 160 character</p>
-                    <textarea   rows="6"  wire:model.defer='descEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
-                </div>
+                    <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($titleID)}}}">
+                        <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
+                        <input maxlength="120" x-ref="countme" x-on:keyup="count = $refs.countme.value.length" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleID' placeholder="Title. . . ">
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs mt-2">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                    <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($descEN)}}}">
+                        <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Description</h1>
+                        <textarea maxlength="160" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Content</h1>
                     <div class="w-full border border-gray-300 dark:border-opacity-20 rounded"
@@ -183,15 +176,19 @@
 
             {{-- tab indonesia --}}
             <div x-show="tabs==='indonesia'" x-cloak style="display: none !important">
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($titleID)}}}">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
-                    <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleID' placeholder="Title. . . ">
+                    <input maxlength="120" x-ref="countme" x-on:keyup="count = $refs.countme.value.length" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleID' placeholder="Title. . . ">
+                    <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs mt-2">
+                        <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                      </div>
                 </div>
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($descID)}}}">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Description</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 160 character</p>
-                    <textarea   rows="6"  wire:model.defer='descID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                    <textarea maxlength="160" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                    <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                        <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                      </div>
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Content</h1>
@@ -236,15 +233,19 @@
 
             {{-- tab japan --}}
             <div x-show="tabs==='japan'" x-cloak style="display: none !important">
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($titleJP)}}}">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Title</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 60 character</p>
-                    <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleJP' placeholder="Title. . . ">
+                    <input maxlength="120" x-ref="countme" x-on:keyup="count = $refs.countme.value.length" type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='titleJP' placeholder="Title. . . ">
+                    <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs mt-2">
+                        <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                      </div>
                 </div>
-                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
+                <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{count:{{strlen($descJP)}}}">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Description</h1>
-                    <p class="text-newgray-700 dark:text-gray-500  italic text-xs mb-2">max 160 character</p>
-                    <textarea   rows="6"  wire:model.defer='descJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                    <textarea maxlength="160" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='descJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                    <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                        <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                      </div>
                 </div>
                 <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
                     <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-4">Content</h1>
