@@ -84,11 +84,11 @@
             <div class=" grid sm:grid-cols-3 grid-cols-1 gap-4 sm:mt-12 sm-6">
                 @foreach ($updates as $item)
                     <div class="col-span-1 flex flex-col ">
-                        <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}"><img loading="lazy" loading="lazy" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{ $item->title }}"  alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
+                        <a  href="{{$item->sourceurl}}"><img loading="lazy" loading="lazy" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{ $item->title }}"  alt="" class="cursor-pointer h-52 w-96 bg-cover bg-center " >
 
                         <p class="text-2xl  text-ndpe font-notoserif cursor-pointer hover:underline pt-2">{{$item->title}}</p>
                         <div class="flex flex-wrap mt-auto pt-3">
-                            <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}" class="font-bold text-ndpe cursor-pointer">Read More</a>
+                            <a  href="{{$item->sourceurl}}" class="font-bold text-ndpe cursor-pointer">Read More</a>
                         </div>
                         </a>
                     </div>

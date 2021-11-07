@@ -11,11 +11,11 @@ class IndexController extends Controller
 {
     public function getSelectInternal(){
         if (App::getLocale() == 'id') {
-            return 'id, titleID as title, slugID as slug, img';
+            return 'id, titleID as title, slugID as slug, img, sourceurl';
         }elseif(App::getLocale() == 'jp'){
-            return 'id, titleJP as title, slugJP as slug, img';
+            return 'id, titleJP as title, slugJP as slug, img, sourceurl';
         }else{
-            return 'id, titleEN as title, slugEN as slug, img';
+            return 'id, titleEN as title, slugEN as slug, img, sourceurl';
         }
     }
 
