@@ -19,7 +19,7 @@
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <a href="{{ route('article', [app()->getLocale(), $item->id, $item->slug]) }}" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
+                        <a href="{{$item->sourceurl}}" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
                         <div class="flex mt-4 sm:flex-row flex-col sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 sm:items-center">
