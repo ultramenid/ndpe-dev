@@ -80,8 +80,6 @@
                         menubar: 'file edit view insert format',
                 },
                 height : 500,
-                skin: 'snow',
-                icons : 'thin',
                 relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,
@@ -117,8 +115,7 @@
                             menubar: 'file edit view insert format',
                     },
                     height : 500,
-                    skin: 'snow',
-                    icons : 'thin',
+
                     relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,
@@ -153,8 +150,7 @@
                             menubar: 'file edit view insert format',
                     },
                     height : 500,
-                    skin: 'snow',
-                    icons : 'thin',
+
                     relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,

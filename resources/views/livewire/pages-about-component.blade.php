@@ -103,8 +103,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -145,8 +144,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -187,8 +185,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -233,8 +230,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -275,8 +271,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -317,8 +312,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -362,8 +356,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -404,8 +397,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -446,8 +438,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -491,8 +482,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -533,8 +523,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -575,8 +564,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -620,8 +608,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -662,8 +649,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
@@ -704,8 +690,7 @@
                                         menubar: 'file edit view insert format',
                                 },
                                 height : 500,
-                                skin: 'snow',
-                                icons : 'thin',
+
                                 height : '100vh',
                                 relative_urls : false,
                             remove_script_host : false,
