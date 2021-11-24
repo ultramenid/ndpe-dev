@@ -1,4 +1,5 @@
 <!-- Place this data between the <head> tags of your website -->
+    <meta name="title" content="{{$title}}"/>
     <meta name="description" content="Save the remaining natural forest cover, including in concessions'" />
     <meta name="news_keywords" content="ndpe, Auriga Nusantara, ndpe performance, NDPE Transparency Platform, ndpe indonesia" />
     <meta name="geo.country" content="id" />

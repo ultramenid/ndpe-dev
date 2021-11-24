@@ -1,5 +1,6 @@
 <!-- Place this data between the <head> tags of your website -->
-    <meta name="description" content="{{$article->title}}" />
+    <meta name="title" content="{{$article->title}}"/>
+    <meta name="description" content="{{$article->description}}" />
     <meta name="news_keywords" content="{{$article->description}}" />
     <meta name="geo.country" content="{{App::getLocale() }}" />
     <meta http-equiv="content-language" content="{{App::getLocale() }}" />
