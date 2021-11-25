@@ -49,7 +49,7 @@ class UpdateController extends Controller
     public function index(){
 
         // dd($this->getAnothereksternal());
-        $title = 'Update - NDPE Transparency Platform';
+        $title = 'News & NDPE Implement Updates';
         $anotherUpdate = $this->getAnothereksternal();
         $eksternals = $this->getContenteksternal();
         $nav = 'update';
