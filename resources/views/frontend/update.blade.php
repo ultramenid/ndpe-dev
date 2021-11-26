@@ -6,16 +6,20 @@
 
 @section('content')
 @include('partials.header')
-    <div class="h-min-screen bg-update-ndpe py-6">
+    <div class="h-min-screen bg-update-ndpe py-6 sm:block hidden">
         @include('partials.nav')
     </div>
     <div class="bg-ndpe-profile min-h-screen">
         <div class="max-w-6xl mx-auto relative px-6 py-6">
+            <div class="border-b">
+            <h1 class="text-center sm:text-5xl text-3xl  sm:py-24 py-12 text-brown-ndpe font-bold font-notoserif">NEWS & NDPE IMPLEMENTATION UPDATES</h1>
+
+            </div>
             @foreach ($eksternals as $item)
             <div class="mt-4">
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
-                    <div class="text-white sm:w-9/12 w-full">
+                    <div class="text-brown-ndpe sm:w-9/12 w-full">
                         <a href="{{$item->sourceurl}}"href="{{$item->sourceurl}}" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
@@ -27,7 +31,7 @@
                                 $tags = (explode(",",$item->tags))
                             @endphp
                             @foreach ($tags as $tag)
-                                <a href="{{ route('tags', [app()->getLocale(),  $tag]) }}"  class="cursor-pointer text-white px-2 py-2 underline bg-green-ndpe">{{$tag}}</a>
+                                <a href="{{ route('tags', [app()->getLocale(),  $tag]) }}"  class="cursor-pointer text-brown-ndpe px-2 py-2 underline bg-green-ndpe">{{$tag}}</a>
                             @endforeach
                             </div>
                         </div>

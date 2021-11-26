@@ -10,7 +10,7 @@
         <!-- Span bottom edge -->
         <div class="relative z-10 max-w-6xl mx-auto" style="height: 70vh">
             <div class="absolute inset-x-0 sm:bottom-14 bottom-28 h-16 px-8">
-                <p class="text-white sm:text-6xl text-4xl font-notoserif">
+                <p class="text-brown-ndpe sm:text-6xl text-4xl font-notoserif">
                     {{__('Save the remaining natural forest cover, including in concessions’.')}}
                 </p>
             </div>

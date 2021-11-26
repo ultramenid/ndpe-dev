@@ -1,6 +1,6 @@
 <div x-data="{lang:'english'}" class="max-w-6xl mx-auto px-6 md:px-8 min-h-screen">
     <livewire:toastr />
-    <div class="py-16 mb-6">
+    <div class=" border-b border-gray-300 dark:border-opacity-20 py-16 mb-6">
         <div class="max-w-6xl mx-auto flex justify-between ">
             <h1 class="sm:text-4xl text-xl text-newgray-900 dark:text-newgray-300 font-semibold ">Page Benchmark</h1>
             <div class="z-30">

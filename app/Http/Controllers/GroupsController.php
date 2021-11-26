@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class GroupsController extends Controller
 {
+
     public function index(){
         $title = 'Groups - NDPE Transparency Platform';
         $nav = 'groups';
+
         return view('backend.groups', compact('title','nav'));
     }
     public function edit($id){

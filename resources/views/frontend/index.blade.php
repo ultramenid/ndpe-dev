@@ -16,7 +16,7 @@
         <div class="max-w-6xl mx-auto  px-6">
             <h1 class="font-notoserif text-ndpe text-4xl sm:px-0 px-4">{{__('Groups')}}</h1>
             <div class="sm:w-6/12  w-full text-ndpe mt-6">
-                <p class="sm:px-0 px-4">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
+                <p class="sm:px-0 px-4 text-ndpe">AboutVolo est, tet voluptament aliqui dentin re plitis pa quaspictem quossit, andiat. Pa parum quis sin nonsequi tor as alis et, similique nem qui nobit ipsumque ad milluptae pa sitae labore, ne vid ent id quam sunt.</p>
             </div>
 
             <div x-data="{swiper: null, prev: false}"
@@ -57,7 +57,7 @@
                     <div class="swiper-wrapper">
                     <!-- Slides -->
                     @foreach ($corporates as $item)
-                        <div x-ref="slider" class="swiper-slide p-4 text-white">
+                        <div x-ref="slider" class="swiper-slide p-4 text-brown-ndpe">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
                                 <a href="#"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>

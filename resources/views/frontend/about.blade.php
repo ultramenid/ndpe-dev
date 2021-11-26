@@ -16,42 +16,42 @@
         background-blend-mode:multiply;">
             @include('partials.nav')
 
-            <div class="max-w-6xl mx-auto px-6 py-28 text-gray-300 z-20"
+            <div class="max-w-6xl mx-auto px-6  text-gray-300 z-20"
             x-data="{ tabs: 'theplatform' }"
             >
-                <h1 class="text-5xl font-notoserif font-light">NDPE Transparency Platform</h1>
+                <h1 class="sm:text-5xl text-4xl font-notoserif font-light text-brown-ndpe py-12 mt-12">NDPE Transparency Platform</h1>
                 <div class="flex sm:flex-row flex-col justify-between sm:space-x-12 space-x-0 sm:space-y-0 space-y-6 mt-12">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4">
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer">THE PLATFORM</a>
+                            <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer text-brown-ndpe">THE PLATFORM</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'ownership' }" @click=" tabs = 'ownership'"   class="text-2xl font-light cursor-pointer">OWNERSHIP</a>
+                            <a :class="{ 'font-bold' : tabs === 'ownership' }" @click=" tabs = 'ownership'"   class="text-2xl font-light cursor-pointer text-brown-ndpe">OWNERSHIP</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'editorial' }" @click=" tabs = 'editorial' "  class="text-2xl font-light cursor-pointer">EDITORIAL</a>
+                            <a :class="{ 'font-bold' : tabs === 'editorial' }" @click=" tabs = 'editorial' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">EDITORIAL</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'content' }" @click=" tabs = 'content' "  class="text-2xl font-light cursor-pointer">CONTENT</a>
+                            <a :class="{ 'font-bold' : tabs === 'content' }" @click=" tabs = 'content' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">CONTENT</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'timeline' }" @click=" tabs = 'timeline'"  class="text-2xl font-light cursor-pointer">TIMELINE</a>
+                            <a :class="{ 'font-bold' : tabs === 'timeline' }" @click=" tabs = 'timeline'"  class="text-2xl font-light cursor-pointer text-brown-ndpe">TIMELINE</a>
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full">
-                        <div class="prose max-w-none text-gray-300" x-show="tabs === 'theplatform' ">
+                        <div class="prose max-w-none text-brown-ndpe" x-show="tabs === 'theplatform' ">
                             {!!$about->theplatform!!}
                         </div>
-                        <div x-show=" tabs === 'ownership'"  x-cloak style="display: none !important" class="prose max-w-none text-gray-300">
+                        <div x-show=" tabs === 'ownership'"  x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe">
                             {!!$about->ownership!!}
                         </div>
-                        <div x-show="tabs === 'editorial' " x-cloak style="display: none !important" class="prose max-w-none text-gray-300" >
+                        <div x-show="tabs === 'editorial' " x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe" >
                             {!!$about->editorial!!}
                         </div>
-                        <div x-show="tabs === 'content' "  x-cloak style="display: none !important" class="prose max-w-none text-gray-300" >
+                        <div x-show="tabs === 'content' "  x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe" >
                             {!!$about->content!!}
                         </div>
-                        <div x-show="tabs ==='timeline'" x-cloak style="display: none !important" class="prose max-w-none text-gray-300">
+                        <div x-show="tabs ==='timeline'" x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe">
                             {!!$about->timeline!!}
                         </div>
                     </div>
