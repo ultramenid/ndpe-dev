@@ -19,11 +19,11 @@
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
                     <div class="text-white sm:w-9/12 w-full">
-                        <a href="{{$item->sourceurl}}" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
+                        <a href="{{$item->sourceurl}}" target="_blank" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
                         <div class="flex mt-4 sm:flex-row flex-col sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 sm:items-center">
-                            <a href="{{$item->sourceurl}}"  class="cursor-pointer text-gray-300 hover:underline text-sm text-left">{{$item->sourcename}}</a>
+                            <a href="{{$item->sourceurl}}" target="_blank" class="cursor-pointer text-gray-300 hover:underline text-sm text-left">{{$item->sourcename}}</a>
                             <div class="border-r border-green-ndpe-2 h-6 sm:block hidden"></div>
                             <div class="flex flex-wrap  justify-between sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 text-sm">
                                 @php
