@@ -23,19 +23,16 @@
                 <div class="flex sm:flex-row flex-col justify-between sm:space-x-12 space-x-0 sm:space-y-0 space-y-6 mt-12">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4">
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer text-brown-ndpe">THE PLATFORM</a>
+                            <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('BACKGROUND')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'ownership' }" @click=" tabs = 'ownership'"   class="text-2xl font-light cursor-pointer text-brown-ndpe">OWNERSHIP</a>
+                            <a :class="{ 'font-bold' : tabs === 'ownership' }" @click=" tabs = 'ownership'"   class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('GOAL')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'editorial' }" @click=" tabs = 'editorial' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">EDITORIAL</a>
+                            <a :class="{ 'font-bold' : tabs === 'editorial' }" @click=" tabs = 'editorial' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('CONTENT')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'content' }" @click=" tabs = 'content' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">CONTENT</a>
-                        </div>
-                        <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'timeline' }" @click=" tabs = 'timeline'"  class="text-2xl font-light cursor-pointer text-brown-ndpe">TIMELINE</a>
+                            <a :class="{ 'font-bold' : tabs === 'content' }" @click=" tabs = 'content' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('EDITORIAL')}}</a>
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full">
