@@ -51,7 +51,7 @@
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-black' : tabs === 'theplatform' }"
-                    >The Platform</a>
+                    >Background</a>
                 </div>
                 {{-- tabs ownership --}}
                 <div @click="tabs='ownership'" class=" mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
@@ -59,7 +59,7 @@
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-bold' : tabs === 'ownership' }"
-                    >Ownership</a>
+                    >Goal</a>
                 </div>
                 {{-- tabs editorial --}}
                 <div @click="tabs='editorial'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
@@ -67,7 +67,7 @@
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-bold' : tabs === 'editorial' }"
-                    >Editorial</a>
+                    >Content</a>
                 </div>
                 {{-- tabs content --}}
                 <div @click="tabs='content'" class=" mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
@@ -75,16 +75,16 @@
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-bold' : tabs === 'content' }"
-                    >Content</a>
+                    >Editorial</a>
                 </div>
                 {{-- tabs timeline --}}
-                <div @click="tabs='timeline'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                {{-- <div @click="tabs='timeline'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'timeline' }"
                 >
                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
                     :class="{ 'font-bold' : tabs === 'timeline' }"
-                    >Timeline</a>
-                </div>
+                    >Editorial</a>
+                </div> --}}
 
             </div>
         </div>
