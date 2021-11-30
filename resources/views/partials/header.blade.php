@@ -2,10 +2,9 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex justify-between items-center">
             <div class="flex space-x-4 text-right">
-                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/twitter.svg" alt="" class="h-3 ">
-                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/facebook.svg" alt="" class="h-3">
-                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/ig.png" alt="" class="h-3">
-                <img loading="lazy" src="https://rmidev.herokuapp.com/assets/linkedin.png" alt="" class="h-3">
+                <img loading="lazy" src="{{ asset('assets/twitter.svg') }}" alt="" class="h-3 ">
+                <img loading="lazy" src="{{ asset('assets/facebook.svg') }}" alt="" class="h-3">
+                <img loading="lazy" src="{{ asset('assets/ig.png') }}"" alt="" class="h-3">
             </div>
             <div class="flex space-x-2 text-gray-300 text-sm">
                 <a href="{{ route(Route::currentRouteName(), 'en') }}"  class="cursor-pointer @if(App::getLocale() == 'en') text-white font-bold @endif">EN</a>
