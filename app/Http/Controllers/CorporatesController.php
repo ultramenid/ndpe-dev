@@ -38,12 +38,29 @@ class CorporatesController extends Controller
         ->selectRaw($this->selectGroups())
         ->get();
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
+
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
     public function index(){
         $title = 'Forestry & Agribusiness Groups We Monitor';
         $nav = 'groups';
         $corporates = $this->getGroups();
         $groups = $this->getGroupsPage();
-        return view('frontend.profile', compact('title', 'nav','groups','corporates'));
+        $footer = $this->getFooter();
+        return view('frontend.profile', compact('title', 'nav','groups','corporates','footer'));
     }
 
     public function detail(){

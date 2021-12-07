@@ -23,10 +23,27 @@ class AboutController extends Controller
                 ->where('id', 1)
                 ->first();
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
+
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
     public function index(){
         $about = $this->getAboutpage();
         $title = 'About - NDPE Transparency Platform';
         $nav = 'about';
-        return view('frontend.about', compact('title','nav', 'about'));
+        $footer = $this->getFooter();
+        return view('frontend.about', compact('title','nav', 'about','footer'));
     }
 }

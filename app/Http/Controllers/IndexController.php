@@ -38,6 +38,22 @@ class IndexController extends Controller
             return 'id, name,descEN as description, corporateSLUG';
         }
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
+
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
 
     public function getContent(){
         return DB::table('corporateprofile')
@@ -51,7 +67,8 @@ class IndexController extends Controller
         $updates = $this->getContentInternal();
         $title = 'Index - NDPE Transparency Platform';
         $corporates = $this->getContent();
+        $footer = $this->getFooter();
         $nav = 'index';
-        return view('frontend.index', compact('title', 'nav','corporates', 'updates'));
+        return view('frontend.index', compact('title', 'nav','corporates', 'updates', 'footer'));
     }
 }

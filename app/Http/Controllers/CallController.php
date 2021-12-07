@@ -24,10 +24,27 @@ class CallController extends Controller
                 ->where('id', 1)
                 ->first();
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
+
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
     public function index(){
         $benchmark = $this->getBenchmarkpage();
         $title = 'Benchmark - NDPE Transparency Platform';
         $nav = 'benchmark';
-        return view('frontend.call', compact('title','nav','benchmark'));
+        $footer = $this->getFooter();
+        return view('frontend.call', compact('title','nav','benchmark', 'footer'));
     }
 }

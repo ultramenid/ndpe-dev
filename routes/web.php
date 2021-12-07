@@ -17,6 +17,7 @@ use App\Http\Controllers\PagesAboutController;
 use App\Http\Controllers\PagesBenchmarkController;
 use App\Http\Controllers\PagesGroupsController;
 use App\Http\Controllers\PerformanceController;
+use App\Http\Controllers\SettingFooter;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\UpdateController;
@@ -72,6 +73,7 @@ Route::group(['middleware' => 'checkSession'], function () {
     Route::get('/cms/abouts', [PagesAboutController::class, 'index']);
     Route::get('/cms/benchmarks', [PagesBenchmarkController::class, 'index']);
     Route::get('/cms/pagegroups', [PagesGroupsController::class, 'index']);
+    Route::get('/cms/settingfooter', [SettingFooter::class, 'index']);
 });
 
 

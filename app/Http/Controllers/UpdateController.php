@@ -45,7 +45,22 @@ class UpdateController extends Controller
         ->orderBy('publishdate','desc')
         ->get();
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
 
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
     public function index(){
 
         // dd($this->getAnothereksternal());
@@ -53,6 +68,7 @@ class UpdateController extends Controller
         $anotherUpdate = $this->getAnothereksternal();
         $eksternals = $this->getContenteksternal();
         $nav = 'update';
-        return view('frontend.update', compact('title', 'nav', 'eksternals','anotherUpdate'));
+        $footer = $this->getFooter();
+        return view('frontend.update', compact('title', 'nav', 'eksternals','anotherUpdate', 'footer'));
     }
 }
