@@ -19,7 +19,7 @@
             <div class="mt-4">
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
-                    <div class="text-brown-ndpe sm:w-9/12 w-full">
+                    <div class="text-brown-ndpe sm:w-8/12 w-full">
                         <a href="{{$item->sourceurl}}" target="_blank" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:block hidden w-3/12 ">
+                    <div class="sm:block hidden w-4/12 ">
                         <img class="h-40 w-72 object-cover" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{$item->title}}">
                     </div>
                 </div>

@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full mt-10">
-                        <div x-show="recs === 'corporate'" class="min-h-screen prose max-w-none text-brown-ndpe">
+                        <div x-show="recs === 'corporate'" class="min-h-screen prose prose-ol:text-brown-ndpe prose-ndpe max-w-none text-brown-ndpe">
                             {!! $benchmark->producer !!}
                         </div>
                         <div x-show=" recs === 'brands' " x-cloak style="display: none !important" class="min-h-screen prose max-w-none text-brown-ndpe">

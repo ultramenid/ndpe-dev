@@ -1,7 +1,9 @@
+
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    purge: [                               //CONFIGURE CORRECTLY
+    content: [                               //CONFIGURE CORRECTLY
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         './resources/**/**/*.blade.php',
@@ -37,15 +39,21 @@ module.exports = {
         fontFamily: {
             'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
             'notoserif' : ['Noto Serif']
-          },
-    },
-  },
-  variants: {
-    extend: {
+        },
+        typography: {
+            DEFAULT: {
+              css: {
+                '--tw-prose-counters': {
+                    colors : '#e2e0d7',
+                    },
+                },
+            }
+        }
+
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
 }
