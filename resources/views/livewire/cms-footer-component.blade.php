@@ -42,23 +42,15 @@
             >Japan</a>
         </div>
     </div>
-    <div class="w-full  rounded mt-2 mb-6" x-data="{count:0}" x-show="tabs==='english'" style="display: none !important;">
-        <textarea maxlength="650" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='textEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
-        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
-            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
-          </div>
+    <div class="w-full  rounded mt-2 mb-6"  x-show="tabs==='english'" style="display: none !important;">
+        <textarea   rows="6"  wire:model.defer='textEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
     </div>
-    <div class="w-full  rounded mt-2 mb-6" x-data="{count:0}" x-show="tabs==='indonesia'" style="display: none !important;">
-        <textarea maxlength="650" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='textID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
-        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
-            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
-          </div>
+    <div class="w-full  rounded mt-2 mb-6"  x-show="tabs==='indonesia'" style="display: none !important;">
+        <textarea   rows="6"  wire:model.defer='textID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
     </div>
-    <div class="w-full  rounded mt-2 mb-6" x-data="{count:0}" x-show="tabs==='japan'" style="display: none !important;">
-        <textarea maxlength="650" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="6"  wire:model.defer='textJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
-        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
-            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
-          </div>
+    <div class="w-full  rounded mt-2 mb-6" x-show="tabs==='japan'" style="display: none !important;">
+        <textarea  rows="6"  wire:model.defer='textJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+
     </div>
 
 </div>
