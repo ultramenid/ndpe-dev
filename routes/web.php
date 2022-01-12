@@ -47,7 +47,7 @@ Route::group(['prefix' => '{lang}'], function () {
     Route::get('/benchmark', [CallController::class, 'index'])->name('benchmark');
     Route::get('/update', [UpdateController::class, 'index'])->name('update');
     Route::get('/performance', [PerformanceController::class, 'index'])->name('performance');
-    Route::get('/corporatedetail/djarum', [CorporatesController::class, 'detail'])->name('corporatedetail');
+    Route::get('/detail', [CorporatesController::class, 'detail'])->name('corporatedetail');
     Route::get('/groups', [CorporatesController::class, 'index'])->name('groups');
     Route::get('/article/{id}/{slug}', [ArticleController::class, 'detail'])->name('article');
     Route::get('/tags/{tag}', [TagsController::class, 'detail'])->name('tags');

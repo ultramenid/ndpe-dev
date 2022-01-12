@@ -66,6 +66,7 @@ class CorporatesController extends Controller
     public function detail(){
         $title = 'Djarum - NDPE Transparency Platform';
         $nav = 'groups';
-        return view('frontend.profile', compact('title', 'nav'));
+        $footer = $this->getFooter();
+        return view('frontend.detail', compact('title', 'nav', 'footer'));
     }
 }
