@@ -18,10 +18,26 @@ class PerformanceController extends Controller
         ->selectRaw($this->getSelect())
         ->get();
     }
+    public function getFooterSelect(){
+        if (App::getLocale() == 'id') {
+            return 'textFooterID as textfooter';
+        }elseif(App::getLocale() == 'jp'){
+            return 'textFooterJP as textfooter';
+        }else{
+            return 'textFooterEN as textfooter';
+        }
+    }
+    public function getFooter(){
+        return DB::table('cmsfooter')
+                ->selectRaw($this->getFooterSelect())
+                ->where('id', 1)
+                ->first();
+    }
     public function index(){
         $corporates = $this->getContent();
         $title = 'Performance - NDPE Transparency Platform';
         $nav = 'performance';
-        return view('frontend.tools', compact('title', 'nav', 'corporates'));
+        $footer = $this->getFooter();
+        return view('frontend.tools', compact('title', 'nav', 'corporates', 'footer'));
     }
 }
