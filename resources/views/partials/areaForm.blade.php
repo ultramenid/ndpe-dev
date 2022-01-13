@@ -17,13 +17,13 @@
                 relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,
-                content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                 plugins: [
                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-                        'table emoticons template paste help'
+                        'table emoticons template paste help '
                         ],
-                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
+                        toolbar: 'fullscreen preview bold italic underline forecolor backcolor iframe |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
                                         ' | link image | print  media  | ' +
                                         ' backcolor emoticons |undo redo  help',
                         menu: {
@@ -53,7 +53,7 @@
                     relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,
-                    content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                    content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                             'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -88,7 +88,7 @@
                     relative_urls : false,
                             remove_script_host : false,
                             convert_urls : true,
-                    content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                    content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                             'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',

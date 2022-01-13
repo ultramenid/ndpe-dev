@@ -80,11 +80,10 @@
                         menubar: 'file edit view insert format',
                 },
                 height : 500,
-
                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                remove_script_host : false,
+                convert_urls : true,
+                content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                 plugins: [
                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -116,8 +115,10 @@
                             menubar: 'file edit view insert format',
                     },
                     height : 500,
-
-                    content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                    relative_urls : false,
+                    remove_script_host : false,
+                    convert_urls : true,
+                    content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                             'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -148,8 +149,10 @@
                             menubar: 'file edit view insert format',
                     },
                     height : 500,
-
-                    content_style: 'body { 	color: #F3F4F6; background-color: #22361b; }',
+                    relative_urls : false,
+                    remove_script_host : false,
+                    convert_urls : true,
+                    content_style: 'body { 	color: #e2e0d7; background-color: #22361b; }',
                     plugins: [
                             'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                             'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',

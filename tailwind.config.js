@@ -44,7 +44,7 @@ module.exports = {
             DEFAULT: {
               css: {
                 '--tw-prose-counters': {
-                    colors : '#e2e0d7',
+                    colors : '#FFFFFF',
                     },
                 },
             }
