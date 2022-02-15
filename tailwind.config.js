@@ -46,7 +46,7 @@ module.exports = {
                 '--tw-prose-counters': {
                     colors : '#FFFFFF',
                     },
-                '--tw-prose-counters': {
+                '--tw-prose-bold': {
                     colors : '#FFFFFF',
                     },
                 },
