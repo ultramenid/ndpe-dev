@@ -46,6 +46,9 @@ module.exports = {
                 '--tw-prose-counters': {
                     colors : '#FFFFFF',
                     },
+                '--tw-prose-counters': {
+                    colors : '#FFFFFF',
+                    },
                 },
             }
         }
