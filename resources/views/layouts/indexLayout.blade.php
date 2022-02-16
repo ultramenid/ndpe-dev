@@ -20,6 +20,6 @@
     @yield('content')
 
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
 </body>
 </html>
