@@ -26,7 +26,7 @@ class ListUpdateComponent extends Component
         ->where('publishdate', '<', Carbon::now('Asia/Jakarta'))
         ->where('isActive', 1)
         ->orderBy('publishdate','desc')
-        ->paginate($this->list);
+        ->cursorPaginate($this->list);
     }
 
 
