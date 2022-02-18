@@ -16,7 +16,7 @@ class ListTagComponent extends Component
         $this->tagg = $tag;
     }
     public function getMore(){
-        $this->paginateLimit +=1;
+        $this->paginateLimit +=10;
     }
     public function getSelectInternal(){
         if (App::getLocale() == 'id') {
