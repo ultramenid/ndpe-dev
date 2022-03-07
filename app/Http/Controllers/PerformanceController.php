@@ -34,10 +34,11 @@ class PerformanceController extends Controller
                 ->first();
     }
     public function index(){
-        $corporates = $this->getContent();
-        $title = 'Performance - NDPE Transparency Platform';
-        $nav = 'performance';
-        $footer = $this->getFooter();
-        return view('frontend.tools', compact('title', 'nav', 'corporates', 'footer'));
+        // $corporates = $this->getContent();
+        // $title = 'Performance - NDPE Transparency Platform';
+        // $nav = 'performance';
+        // $footer = $this->getFooter();
+        // return view('frontend.tools', compact('title', 'nav', 'corporates', 'footer'));
+        return redirect()->route('index', app()->getlocale() );
     }
 }

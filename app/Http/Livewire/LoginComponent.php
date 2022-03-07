@@ -11,7 +11,7 @@ class LoginComponent extends Component{
     public $username, $password;
      //check user is registered
      public function getDatauser(){
-        return DB::table('users')->first();
+        return DB::table('users')->where('username', $this->username)->first();
      }
 
     public function login(){
