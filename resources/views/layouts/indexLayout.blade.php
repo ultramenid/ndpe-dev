@@ -15,6 +15,15 @@
     @livewireScripts
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
     <script src="{{ asset('js/app.js') }}" defer ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N9Q7PD9HY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5N9Q7PD9HY');
+    </script>
 </head>
 <body>
 
