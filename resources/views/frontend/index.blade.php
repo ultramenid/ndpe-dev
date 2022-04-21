@@ -60,7 +60,7 @@
                         <div x-ref="slider" class="swiper-slide p-4 text-brown-ndpe">
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4">
-                                <a href="#"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
+                                <a href="{{ route('corporatedetail', [app()->getLocale(), $item->id, $item->corporateSLUG]) }}"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
                                 <p class="text-xs mb-6 leading-relaxed">{{$item->description}}
                                 </p>
                             </div>

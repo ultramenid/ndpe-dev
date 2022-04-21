@@ -9,8 +9,8 @@
     <div class="h-min-screen bg-ndpe-profile py-6">
         @include('partials.nav')
         <div class="max-w-6xl mx-auto relative px-6 mt-12">
-            <div class="flex sm:flex-row flex-col justify-between sm:space-x-16 sm:space-y-0 space-y-4">
-                <div class="text-white sm:w-6/12 w-full">
+            <div class="flex sm:flex-row flex-col justify-between sm:space-x-16 sm:space-y-0 space-y-4 items-center">
+                <div class="text-white sm:w-7/12 w-full">
                     <h1 class="text-6xl font-bold font-notoserif">{{ $detail->name }}</h1>
                     <p class="mt-6 text-xl font-light">{{ $detail->description }}</p>
                     <div class="border-b-2 border-white mt-6">
@@ -18,12 +18,12 @@
                     </div>
                     <div class="flex sm:flex-row flex-col jusitify-between mt-8  sm:space-x-16 space-x-0 sm:space-y-0 space-y-4">
                         <div class="sm:w-6/12 w-full">
-                            <h2 class="text-7xl font-notoserif">$<a class="text-7xl font-notoserif">{{$detail->nilai1}}</a>m</h2>
-                            <p class="text-2xl mt-4 font-light">AboutVolo est, tetvolu pta ment aliqui.</p>
+                            <h2 class="text-4xl font-notoserif"><a class="text-4xl font-notoserif">{{$detail->nilai1}}</a> ha</h2>
+                            <p class="text-sm mt-4 font-light">{{$detail->nilai1Desc}}</p>
                         </div>
                         <div class="sm:w-6/12 w-full">
-                            <h2 class="text-7xl font-notoserif">$<a class="text-7xl font-notoserif">{{$detail->nilai2}}</a>m</h2>
-                            <p class="text-2xl mt-4 font-light">AboutVolo est, tetvolu pta ment aliqui.</p>
+                            <h2 class="text-4xl font-notoserif"><a class="text-4xl font-notoserif">{{$detail->nilai2}}</a> ha</h2>
+                            <p class="text-sm mt-4 font-light">{{$detail->nilai2Desc}}</p>
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,6 @@ class EditEksternalComponent extends Component
         $this->descID = $data->descID;
         $this->descJP = $data->descJP;
         $this->isactive = $data->isActive;
-
     }
     //realtime validation upload
     public function updatedPhoto($photo)

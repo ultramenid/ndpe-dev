@@ -1,18 +1,5 @@
 <div x-show="tabs==='overview'" x-cloak style="display: none !important">
     <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
-        <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-6">Highlight</h1>
-        <div class="flex justify-between space-x-4">
-            <label class="w-full">
-                <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 1:</h2>
-                <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value1' >
-            </label>
-            <label class="w-full">
-                <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 2:</h2>
-                <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value2' >
-            </label>
-        </div>
-    </div>
-    <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6">
         <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 mb-6">Image </h1>
         <div class="flex items-center justify-center px-2 py-2 border border-dashed border-gray-400 rounded">
             <label class="cursor-pointer">
@@ -29,6 +16,75 @@
             </label>
         </div>
     </div>
+    <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6" x-data="{open:false}">
+        <div class="flex justify-between cursor-pointer" @click="open = ! open">
+            <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 ">Highlight</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-newbg-newgray-900 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+        </div>
+        <div x-show="open" x-cloak style="display: none !important" class="mt-6">
+            <div class="flex justify-between space-x-4">
+                <div class="w-full">
+                    <label>
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 1:</h2>
+                        <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value1' >
+                    </label>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description English:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai1DescEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description Indonesia:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai1DescID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description Japan:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai1DescJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <label >
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 2:</h2>
+                        <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value2' >
+                    </label>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description English:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai2DescEN' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description Indonesia:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai2DescID' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                    <div x-data="{count:0}" class="mb-6 mt-4">
+                        <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description Japan:</h2>
+                        <textarea maxlength="250" x-ref="countme" x-on:keyup="count = $refs.countme.value.length"  rows="4"  wire:model.defer='nilai2DescJP' required class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20" placeholder="Description. . ."></textarea>
+                        <div class="flex justify-end text-newgray-700 dark:text-gray-500  italic text-xs">
+                            <span x-html="count"></span> / <span  x-html="$refs.countme.maxLength"></span>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="w-full border border-gray-300 dark:border-opacity-20 rounded px-6 py-6 mb-6 " x-data="{open:false}">
         <div class="flex justify-between cursor-pointer " @click="open=!open">
             <h1 class="text-2xl font-semibold  text-newbg-newgray-900 dark:text-gray-300 ">Corporate Description </h1>

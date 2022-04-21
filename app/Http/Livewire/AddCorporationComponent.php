@@ -16,7 +16,7 @@ class AddCorporationComponent extends Component
     use WithFileUploads;
     public $tags = [], $urlfiles = [];
     public $mediafile, $urlfile;
-    public $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2;
+    public $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2, $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
 
     public function uploadImage(){
         $file = $this->photo->store('public');
@@ -93,6 +93,12 @@ class AddCorporationComponent extends Component
                 'socialconflict' => $this->socialconflict,
                 'nilai1' => $this->value1,
                 'nilai2' => $this->value2,
+                'nilai1DescEN' => $this->nilai1DescEN,
+                'nilai1DescID' => $this->nilai1DescID,
+                'nilai1DescJP' => $this->nilai1DescJP,
+                'nilai2DescEN' => $this->nilai2DescEN,
+                'nilai2DescID' => $this->nilai2DescID,
+                'nilai2DescJP' => $this->nilai2DescJP,
                 'created_at' => Carbon::now('Asia/Jakarta')
             ]);
             redirect()->to('/cms/groups');

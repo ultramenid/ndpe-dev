@@ -14,7 +14,7 @@ class EditCorporateComponent extends Component
 {
     use WithFileUploads;
     public $idcorporates;
-    public $uphoto, $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2;
+    public $uphoto, $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2 , $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
     public $tags = [], $urlfiles = [];
     public $mediafile, $urlfile;
 
@@ -51,6 +51,12 @@ class EditCorporateComponent extends Component
         $this->bioloss = $data->biodiversityloss;
         $this->peatlanddestruct = $data->peatlanddestruc;
         $this->socialconflict = $data->socialconflict;
+        $this->nilai1DescEN = $data->nilai1DescEN;
+        $this->nilai1DescID = $data->nilai1DescID;
+        $this->nilai1DescJP = $data->nilai1DescJP;
+        $this->nilai2DescEN = $data->nilai2DescEN;
+        $this->nilai2DescID = $data->nilai2DescID;
+        $this->nilai2DescJP = $data->nilai2DescJP;
     }
 
     public function updatedMediafile($mediafile){
@@ -143,6 +149,12 @@ class EditCorporateComponent extends Component
                 'socialconflict' => $this->socialconflict,
                 'nilai1' => $this->value1,
                 'nilai2' => $this->value2,
+                'nilai1DescEN' => $this->nilai1DescEN,
+                'nilai1DescID' => $this->nilai1DescID,
+                'nilai1DescJP' => $this->nilai1DescJP,
+                'nilai2DescEN' => $this->nilai2DescEN,
+                'nilai2DescID' => $this->nilai2DescID,
+                'nilai2DescJP' => $this->nilai2DescJP,
                 'updated_at' => Carbon::now('Asia/Jakarta')
             ]);
 
