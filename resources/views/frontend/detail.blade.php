@@ -18,10 +18,12 @@
                     </div>
                     <div class="flex sm:flex-row flex-col jusitify-between mt-8  sm:space-x-16 space-x-0 sm:space-y-0 space-y-4">
                         <div class="sm:w-6/12 w-full">
+                            <h4 class="text-xl font-notoserif">Total Konsesi</h4>
                             <h2 class="text-4xl font-notoserif"><a class="text-4xl font-notoserif">{{$detail->nilai1}}</a> ha</h2>
                             <p class="text-sm mt-4 font-light">{{$detail->nilai1Desc}}</p>
                         </div>
                         <div class="sm:w-6/12 w-full">
+                            <h4 class="text-xl font-notoserif">Total Hutan Alam</h4>
                             <h2 class="text-4xl font-notoserif"><a class="text-4xl font-notoserif">{{$detail->nilai2}}</a> ha</h2>
                             <p class="text-sm mt-4 font-light">{{$detail->nilai2Desc}}</p>
                         </div>
@@ -33,7 +35,7 @@
             </div>
 
             {{-- tabs lg --}}
-            <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 sm:block hidden"
+            <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 "
             x-data="{tabs: 'overview'}"
             >
                 <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
@@ -128,77 +130,7 @@
                 </div>
             </div>
 
-            {{-- tabs sm --}}
-            <div class="bg-brown-ndpe mt-20 px-6 py-4 sm:hidden block"
-                x-data="{overview:false, area:false, ownership:false, financial:false, buyer:false, performance:false}">
-                <div class="flex flex-col space-y-4">
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=!overview, area=false, ownership=false, financial=false, buyer=false, performance=false"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            Overview
-                        </button>
-                        <div x-show="overview" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->overview !!}
-                        </div>
-                    </div>
 
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=false, area=!area, ownership=false, financial=false, buyer=false, performance=false"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            Area
-                        </button>
-                        <div x-show="area" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->area !!}
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=false, area=false, ownership=!ownership, financial=false, buyer=false, performance=false"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            Ownership
-                        </button>
-                        <div x-show="ownership" x-cloak style="display: none !important" class=" prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->ownership !!}
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=false, area=false, ownership=false, financial=!financial, buyer=false, performance=false"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            Financial
-                        </button>
-                        <div x-show="financial" x-cloak style="display: none !important" class=" prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->financial !!}
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=false, area=false, ownership=false, financial=false, buyer=!buyer, performance=false"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            Buyer
-                        </button>
-                        <div x-show="buyer" x-cloak style="display: none !important" class=" prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->buyer !!}
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col space-y-2">
-                        <button
-                        @click="overview=false, area=false, ownership=false, financial=false, buyer=false, performance=!performance"
-                        class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                            NDPE Performance
-                        </button>
-                        <div x-show="performance" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe bg-green-ndpe px-4 py-6 text-white">
-                            {!! $detail->performance !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
         </div>

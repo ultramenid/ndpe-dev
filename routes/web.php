@@ -74,6 +74,9 @@ Route::group(['middleware' => 'checkSession'], function () {
     Route::get('/cms/benchmarks', [PagesBenchmarkController::class, 'index']);
     Route::get('/cms/pagegroups', [PagesGroupsController::class, 'index']);
     Route::get('/cms/settingfooter', [SettingFooter::class, 'index']);
+    Route::group(['prefix' => '/cms/ndpe-filemanager', 'middleware' => 'checkSession'], function () {
+        \UniSharp\LaravelFilemanager\Lfm::routes();
+    });
 });
 
 

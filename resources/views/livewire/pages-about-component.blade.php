@@ -3,7 +3,7 @@
     <div class=" border-b border-gray-300 dark:border-opacity-20 py-16 mb-6">
         <div class="max-w-6xl mx-auto px-6  flex justify-between ">
             <h1 class="sm:text-4xl text-xl text-newgray-900 dark:text-newgray-300 font-semibold ">Page About</h1>
-            <div class="z-30">
+            <div class="">
                 <button wire:loading.remove wire:target='storeAbout'  wire:click='storeAbout' id="btnStore" class="inline-flex sm:px-16 px-8 sm:py-2 py-1 rounded dark:hover:bg-newgray-900 dark:hover:border-gray-200 dark:hover:text-gray-200 hover:bg-white hover:text-newgray-900 border hover:border-newgray-900 bg-newgray-900 dark:bg-gray-100 text-newgray-100 dark:text-newgray-900">
                     Save
                 </button>
@@ -99,29 +99,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#theplatformEN',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('theplatformEN', editor.getContent());
@@ -140,29 +156,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#theplatformID',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('theplatformID', editor.getContent());
@@ -181,29 +213,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#theplatformJP',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('theplatformJP', editor.getContent());
@@ -226,29 +274,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#ownershipEN',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('ownershipEN', editor.getContent());
@@ -267,35 +331,51 @@
                             x-init="
                             tinymce.init({
                                 selector: '#ownershipID',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('ownershipID', editor.getContent());
                                         });
                                     }
-                            });">
+                            });;">
                             <textarea rows="20" id="ownershipID" name="ownershipID"  wire:model.defer='ownershipID' required></textarea>
                         </div>
                     </div>
@@ -308,29 +388,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#ownershipJP',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('ownershipJP', editor.getContent());
@@ -352,29 +448,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#editorialEN',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('editorialEN', editor.getContent());
@@ -393,29 +505,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#editorialID',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('editorialID', editor.getContent());
@@ -434,29 +562,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#editorialJP',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('editorialJP', editor.getContent());
@@ -478,29 +622,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#contentEN',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('contentEN', editor.getContent());
@@ -519,29 +679,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#contentID',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('contentID', editor.getContent());
@@ -560,29 +736,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#contentJP',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('contentJP', editor.getContent());
@@ -604,29 +796,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#timelineEN',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('timelineEN', editor.getContent());
@@ -645,29 +853,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#timelineID',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('timelineID', editor.getContent());
@@ -686,29 +910,45 @@
                             x-init="
                             tinymce.init({
                                 selector: '#timelineJP',
-                                mobile: {
-                                        menubar: 'file edit view insert format',
-                                },
                                 height : 500,
-
-                                height : '100vh',
+                                height : '70vh',
                                 relative_urls : false,
-                            remove_script_host : false,
-                            convert_urls : true,
-                                content_style: 'body { 	color: white; background-color: #22361b; }',
+                                    remove_script_host : false,
+                                    convert_urls : true,
+                                    content_style: 'body { 	color: white; background-color: #22361b; }',
                                 plugins: [
                                         'advlist autolink textcolor link image lists charmap print preview hr anchor pagebreak',
                                         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
                                         'table emoticons template paste help'
                                         ],
                                         toolbar: 'fullscreen preview bold italic underline forecolor backcolor |bullist numlist alignleft aligncenter alignright alignjustify outdent indent|  fontselect fontsizeselect formatselect   | ' +
-                                        ' | link image | print  media  | ' +
-                                        ' backcolor emoticons |undo redo  help',
+                                                ' | link image | print  media  | ' +
+                                                ' backcolor emoticons |undo redo  help',
                                         menu: {
                                         favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
                                         },
                                         menubar: ' file edit view insert format tools table help',
-
+                                        file_picker_callback : function(callback, value, meta) {
+                                            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                                            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+                                            var cmsURL = '/cms/' + 'ndpe-filemanager?editor=' + meta.fieldname;
+                                            if (meta.filetype == 'image') {
+                                                cmsURL = cmsURL + '&type=Images';
+                                            } else {
+                                                cmsURL = cmsURL + '&type=Files';
+                                            }
+                                            tinyMCE.activeEditor.windowManager.openUrl({
+                                                url : cmsURL,
+                                                title : 'Filemanager',
+                                                width : x * 0.8,
+                                                height : y * 0.8,
+                                                resizable : 'yes',
+                                                close_previous : 'no',
+                                                onMessage: (api, message) => {
+                                                callback(message.content);
+                                                }
+                                            });
+                                        },
                                         setup: function(editor) {
                                             editor.on('change', function(e) {
                                                 @this.set('timelineJP', editor.getContent());

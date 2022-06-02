@@ -1,4 +1,4 @@
-<div class="border-b border-gray-300 dark:border-opacity-20 sticky top-0 z-10 ">
+<div class="border-b border-gray-300 bg-gray-100 dark:bg-newgray-900 bg-opacity-90 dark:border-opacity-20 sticky top-0 z-10 ">
     <div class="max-w-6xl mx-auto px-6 "  x-data="{ pages: false }">
         <nav class="-mb-px flex space-x-6 text-sm leading-5 overflow-x-auto scrollbar-hide text-gray-500">
             <div class="hover:bg-gray-200 dark:hover:bg-newgray-700 py-3 px-2 rounded @if($nav == 'dashboard' )border-b-2  dark:border-gray-300 border-newgray-900 @endif ">

@@ -60,15 +60,15 @@ class EditEksternalComponent extends Component
     }
 
     public function uploadImage(){
-        $file = $this->photo->store('public');
-       $foto = $this->photo->hashName();
+        $file = $this->photo->store('public/files/photos');
+        $foto = $this->photo->hashName();
 
-       $manager = new ImageManager();
+        $manager = new ImageManager();
 
-       //http://image.intervention.io/api/fit
-       //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
-       $image = $manager->make('storage/'.$foto)->fit(600,315);
-       $image->save('storage/thumbnail/'.$foto);
+        // https://image.intervention.io/v2/api/fit
+        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
+        $image = $manager->make('storage/files/photos/'.$foto)->fit(600, 360);
+        $image->save('storage/files/photos/thumbnail/'.$foto);
        return $foto;
     }
     public function storeEksternal(){
@@ -77,8 +77,8 @@ class EditEksternalComponent extends Component
                 $name = $this->uphoto;
             }else{
                 try {
-                    unlink(storage_path('app/public/'.$this->uphoto));
-                     unlink(storage_path('app/public/thumbnail/'.$this->uphoto));
+                    unlink(storage_path('app/public/files/photos/'.$this->uphoto));
+                     unlink(storage_path('app/publicfiles/photos/thumbnail/'.$this->uphoto));
                      $name=  $this->uploadImage();
                 } catch (\Throwable $th) {
                    $name=  $this->uploadImage();
