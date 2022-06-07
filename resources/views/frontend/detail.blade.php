@@ -109,22 +109,22 @@
                     </div>
                 </div>
                 <div class="min-h-screen bg-green-ndpe px-4 py-6 text-white">
-                    <div x-show="tabs === 'overview'" x-cloak style="display: none !important" class=" prose text-sm  max-w-none text-brown-ndpe ">
+                    <div x-show="tabs === 'overview'" x-cloak style="display: none !important" class=" prose   max-w-none text-brown-ndpe ">
                         {!! $detail->overview !!}
                     </div>
-                    <div x-show="tabs === 'area'" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe">
+                    <div x-show="tabs === 'area'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->area !!}
                     </div>
-                    <div x-show="tabs === 'ownership'" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe">
+                    <div x-show="tabs === 'ownership'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->ownership !!}
                     </div>
-                    <div x-show="tabs === 'financial'" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe">
+                    <div x-show="tabs === 'financial'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->financial !!}
                     </div>
-                    <div x-show="tabs === 'buyer'" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe">
+                    <div x-show="tabs === 'buyer'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->buyer !!}
                     </div>
-                    <div x-show="tabs === 'performance'" x-cloak style="display: none !important" class="prose text-sm  max-w-none text-brown-ndpe">
+                    <div x-show="tabs === 'performance'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->performance !!}
                     </div>
                 </div>
