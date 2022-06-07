@@ -68,7 +68,7 @@
                         :class="{ 'lg:no-underline underline' : tabs === 'financial' }"
                         @click=" tabs= 'financial'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
-                        Financial
+                        Spotlight
                     </button>
 
                     {{-- Buyer --}}
