@@ -26,7 +26,7 @@
 
 <script>
 var map = L.map('map').setView([0.7893, 117.9213],4);
-L.tileLayer.betterWms('http://129.150.48.143:8080/geoserver/wfs', {
+L.tileLayer.betterWms('https://aws.simontini.id/geoserver/wfs', {
   layers: 'ndpe:Prov_BIG',
   transparent: true,
   format: 'image/png',
@@ -34,7 +34,7 @@ L.tileLayer.betterWms('http://129.150.48.143:8080/geoserver/wfs', {
 }).addTo(map);
 
 //Geoserver Web Feature Service
-$.ajax('http://129.150.48.143:8080/geoserver/wfs',{
+$.ajax('https://aws.simontini.id/geoserver/wfs',{
   type: 'GET',
   data: {
     service: 'WFS',
