@@ -13,6 +13,7 @@ use App\Http\Controllers\GroupsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\InternalController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MapController;
 use App\Http\Controllers\PagesAboutController;
 use App\Http\Controllers\PagesBenchmarkController;
 use App\Http\Controllers\PagesGroupsController;
@@ -51,6 +52,7 @@ Route::group(['prefix' => '{lang}'], function () {
     Route::get('/groups', [CorporatesController::class, 'index'])->name('groups');
     Route::get('/article/{id}/{slug}', [ArticleController::class, 'detail'])->name('article');
     Route::get('/tags/{tag}', [TagsController::class, 'detail'])->name('tags');
+    Route::get('/mapkorindo', [MapController::class, 'korindo'])->name('korindo');
 
 });
 

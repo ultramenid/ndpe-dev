@@ -15,6 +15,10 @@
     @livewireScripts
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
     <script src="{{ asset('js/app.js') }}" defer ></script>
+    <script src="{{ asset('js/maps.js') }}" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N9Q7PD9HY"></script>
     <script>
