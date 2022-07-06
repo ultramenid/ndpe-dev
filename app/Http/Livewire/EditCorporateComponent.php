@@ -114,21 +114,29 @@ class EditCorporateComponent extends Component
 
     public function storeCorporate(){
         if($this->manualValidation()){
-            if(!$this->photo and !$this->imgmap){
+            if(!$this->photo){
                 $name = $this->uphoto;
-                $namemap = $this->uphotomap;
 
             }else{
                 try {
                     unlink(storage_path('app/public/files/photos/'.$this->uphoto));
                      unlink(storage_path('app/public/files/photos/thumbnail/'.$this->uphoto));
-                     unlink(storage_path('app/public/files/photos/'.$this->uphotomap));
-                     unlink(storage_path('app/public/files/photos/thumbnail/'.$this->uphotomap));
                      $name =  $this->uploadImage();
-                     $namemap =  $this->uploadImageMap();
                 } catch (\Throwable $th) {
                    $name=  $this->uploadImage();
-                   $namemap=  $this->uploadImageMap();
+                }
+
+            }
+            if(!$this->imgmap){
+                $namemap = $this->uphotomap;
+
+            }else{
+                try {
+                    unlink(storage_path('app/public/files/photos/'.$this->uphotomap));
+                     unlink(storage_path('app/public/files/photos/thumbnail/'.$this->uphotomap));
+                     $namemap =  $this->uploadImageMap();
+                } catch (\Throwable $th) {
+                   $namemap =  $this->uploadImageMap();
                 }
 
             }
