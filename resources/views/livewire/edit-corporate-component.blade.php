@@ -69,6 +69,14 @@
                     :class="{ 'font-bold' : tabs === 'perforamance' }"
                     >Performance</a>
                 </div>
+                 {{-- tabs map --}}
+                 <div @click="tabs='map'" class="mb-2 hover:bg-gray-200 dark:hover:bg-newgray-700 py-2 px-2 rounded  cursor-pointer"
+                 :class="{ 'border-l-2 border-newgray-900 dark:border-gray-300' : tabs === 'map' }"
+                 >
+                     <a  class=" px-0.5  text-newgray-900 dark:text-gray-400 text-sm   hover:text-newgray-900 dark:hover:text-gray-300 "
+                     :class="{ 'font-bold' : tabs === 'map' }"
+                     >Map Image</a>
+                 </div>
             </div>
 
         </div>
@@ -97,6 +105,9 @@
 
             {{-- performance --}}
             @include('partials.performanceForm')
+
+            {{-- map --}}
+            @include('partials.editimgmap')
         </div>
     </div>
     </div>

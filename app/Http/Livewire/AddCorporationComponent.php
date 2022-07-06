@@ -16,21 +16,32 @@ class AddCorporationComponent extends Component
     use WithFileUploads;
     public $tags = [], $urlfiles = [];
     public $mediafile, $urlfile;
-    public $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2, $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
+    public $photo, $photomap, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2, $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
 
     public function uploadImage(){
-        $file = $this->photo->store('public');
-       $foto = $this->photo->hashName();
+        $file = $this->photo->store('public/files/photos');
+        $foto = $this->photo->hashName();
 
-       $manager = new ImageManager();
+        $manager = new ImageManager();
 
-       //http://image.intervention.io/api/fit
-       //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
-       $image = $manager->make('storage/'.$foto)->resize(240, null, function ($constraint) {
-        $constraint->aspectRatio();
-        });
-       $image->save('storage/thumbnail/'.$foto);
-       return $foto;
+        // https://image.intervention.io/v2/api/fit
+        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
+        $image = $manager->make('storage/files/photos/'.$foto)->fit(600, 360);
+        $image->save('storage/files/photos/thumbnail/'.$foto);
+        return $foto;
+    }
+
+    public function uploadImageMap(){
+        $file = $this->photomap->store('public/files/photos');
+        $foto = $this->photomap->hashName();
+
+        $manager = new ImageManager();
+
+        // https://image.intervention.io/v2/api/fit
+        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
+        $image = $manager->make('storage/files/photos/'.$foto)->fit(600, 360);
+        $image->save('storage/files/photos/thumbnail/'.$foto);
+        return $foto;
     }
 
     public function updatedMediafile($mediafile){
@@ -66,6 +77,7 @@ class AddCorporationComponent extends Component
                 'name' => $this->corporatename,
                 'corporateSLUG' => Str::slug($this->corporatename,'-'),
                 'img' => $this->uploadImage(),
+                'imgmap' => $this->uploadImageMap(),
                 'descEN' => $this->descEN,
                 'descID' => $this->descID,
                 'descJP' => $this->descJP,
@@ -114,7 +126,22 @@ class AddCorporationComponent extends Component
             $message = 'Files not supported';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
-         }elseif($photo->getSize() > 8097152){
+         }elseif($photo->getSize() > 807152){
+            $this->reset('photo');
+            $message = 'Files must not be greater than 8MB';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+         }
+     }
+     public function updatedPhotomap($photomap)
+     {
+         $extension = pathinfo($photomap->getFilename(), PATHINFO_EXTENSION);
+         if (!in_array($extension, ['png', 'jpeg', 'bmp', 'gif','jpg','webp'])) {
+            $this->reset('photo');
+            $message = 'Files not supported';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+         }elseif($photomap->getSize() > 8097152){
             $this->reset('photo');
             $message = 'Files must not be greater than 8MB';
             $type = 'error'; //error, success

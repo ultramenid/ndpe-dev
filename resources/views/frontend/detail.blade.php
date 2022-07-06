@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="sm:w-6/12 w-full">
-                    <img src="{{ asset('assets/dummypeta.png') }}" alt="">
+                    <img src="{{ asset('/storage/files/photos/'.$detail->imgmap) }}" alt="">
                 </div>
             </div>
 

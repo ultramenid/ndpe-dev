@@ -65,11 +65,11 @@ class CorporatesController extends Controller
     }
     public function getSelectCorporate(){
         if (App::getLocale() == 'id') {
-            return 'name, descID as description,overviewID as overview, areaID as area, ownershipID as ownership, financialID as financial, buyerID as buyer, performanceID as performance, nilai1, nilai2, img, nilai1DescID as nilai1Desc , nilai2DescID as nilai2Desc';
+            return 'name, descID as description,overviewID as overview, areaID as area, ownershipID as ownership, financialID as financial, buyerID as buyer, performanceID as performance, nilai1, nilai2, img, imgmap, nilai1DescID as nilai1Desc , nilai2DescID as nilai2Desc';
         }elseif(App::getLocale() == 'jp'){
-            return 'name, descJP as description,overviewJP as overview, areaJP as area, ownershipJP as ownership, financialJP as financial, buyerJP as buyer, performanceJP as performance, nilai1, nilai2, img, nilai1DescJP as nilai1Desc, nilai2DescJP as nilai2Desc';
+            return 'name, descJP as description,overviewJP as overview, areaJP as area, ownershipJP as ownership, financialJP as financial, buyerJP as buyer, performanceJP as performance, nilai1, nilai2, img, imgmap, nilai1DescJP as nilai1Desc, nilai2DescJP as nilai2Desc';
         }else{
-            return ' name, descEN as description,overviewEN as overview, areaEN as area, ownershipEN as ownership, financialEN as financial, buyerEN as buyer, performanceEN as performance, nilai1, nilai2, img, nilai1DescEN as nilai1Desc, nilai2DescEN as nilai2Desc';
+            return ' name, descEN as description,overviewEN as overview, areaEN as area, ownershipEN as ownership, financialEN as financial, buyerEN as buyer, performanceEN as performance, nilai1, nilai2, img, imgmap, nilai1DescEN as nilai1Desc, nilai2DescEN as nilai2Desc';
         }
     }
 

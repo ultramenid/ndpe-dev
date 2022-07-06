@@ -13,8 +13,8 @@ use Illuminate\Support\Str;
 class EditCorporateComponent extends Component
 {
     use WithFileUploads;
-    public $idcorporates;
-    public $uphoto, $photo, $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2 , $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
+    public $idcorporates, $imgmap, $uphotomap;
+    public $uphoto, $photo,  $corporatename, $descEN, $descID, $descJP, $overviewEN, $overviewID, $overviewJP, $areaEN, $areaID, $areaJP, $ownershipEN, $ownershipID, $ownershipJP, $financialEN, $financialID, $financialJP, $buyerEN, $buyerID, $buyerJP, $performanceEN, $performanceID, $performanceJP, $deforestation, $bioloss, $peatlanddestruct, $socialconflict, $value1, $value2 , $nilai1DescEN, $nilai1DescID, $nilai1DescJP, $nilai2DescEN, $nilai2DescID, $nilai2DescJP;
     public $tags = [], $urlfiles = [];
     public $mediafile, $urlfile;
 
@@ -57,6 +57,7 @@ class EditCorporateComponent extends Component
         $this->nilai2DescEN = $data->nilai2DescEN;
         $this->nilai2DescID = $data->nilai2DescID;
         $this->nilai2DescJP = $data->nilai2DescJP;
+        $this->uphotomap = $data->imgmap;
     }
 
     public function updatedMediafile($mediafile){
@@ -87,31 +88,47 @@ class EditCorporateComponent extends Component
         }
     }
     public function uploadImage(){
-        $file = $this->photo->store('public');
-       $foto = $this->photo->hashName();
+        $file = $this->photo->store('public/files/photos');
+        $foto = $this->photo->hashName();
 
-       $manager = new ImageManager();
+        $manager = new ImageManager();
 
-       //http://image.intervention.io/api/fit
-       //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
-       $image = $manager->make('storage/'.$foto)->resize(240, null, function ($constraint) {
-        $constraint->aspectRatio();
-        });
-       $image->save('storage/thumbnail/'.$foto);
-       return $foto;
+        // https://image.intervention.io/v2/api/fit
+        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
+        $image = $manager->make('storage/files/photos/'.$foto)->fit(600, 360);
+        $image->save('storage/files/photos/thumbnail/'.$foto);
+        return $foto;
+    }
+    public function uploadImageMap(){
+        $file = $this->imgmap->store('public/files/photos');
+        $foto = $this->imgmap->hashName();
+
+        $manager = new ImageManager();
+
+        // https://image.intervention.io/v2/api/fit
+        //crop the best fitting 1:1 ratio (200x200) and resize to 200x200 pixel
+        $image = $manager->make('storage/files/photos/'.$foto)->fit(600, 360);
+        $image->save('storage/files/photos/thumbnail/'.$foto);
+        return $foto;
     }
 
     public function storeCorporate(){
         if($this->manualValidation()){
-            if(!$this->photo){
+            if(!$this->photo and !$this->imgmap){
                 $name = $this->uphoto;
+                $namemap = $this->imgmap;
+
             }else{
                 try {
-                    unlink(storage_path('app/public/'.$this->uphoto));
-                     unlink(storage_path('app/public/thumbnail/'.$this->uphoto));
-                     $name=  $this->uploadImage();
+                    unlink(storage_path('app/public/files/photos/'.$this->uphoto));
+                     unlink(storage_path('app/public/files/photos/thumbnail/'.$this->uphoto));
+                     unlink(storage_path('app/public/files/photos/'.$this->uphotomap));
+                     unlink(storage_path('app/public/files/photos/thumbnail/'.$this->uphotomap));
+                     $name =  $this->uploadImage();
+                     $namemap =  $this->uploadImageMap();
                 } catch (\Throwable $th) {
                    $name=  $this->uploadImage();
+                   $namemap=  $this->uploadImageMap();
                 }
 
             }
@@ -122,6 +139,7 @@ class EditCorporateComponent extends Component
                 'name' => $this->corporatename,
                 'corporateSLUG' => Str::slug($this->corporatename,'-'),
                 'img' => $name,
+                'imgmap' => $namemap,
                 'descEN' => $this->descEN,
                 'descID' => $this->descID,
                 'descJP' => $this->descJP,
@@ -176,12 +194,30 @@ class EditCorporateComponent extends Component
             $message = 'Files not supported';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
-         }elseif($photo->getSize() > 5097152){
+         }elseif($photo->getSize() > 807152){
             $this->reset('photo');
-            $message = 'Files must not be greater than 5MB';
+            $message = 'Files must not be greater than 8MB';
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
          }
+     }
+     //realtime validation upload
+     public function updatedImgmap($imgmap)
+     {
+        // dd($imgmap->temporaryUrl());
+         $extension = pathinfo($imgmap->getFilename(), PATHINFO_EXTENSION);
+         if (!in_array($extension, ['png', 'jpeg', 'bmp', 'gif','jpg','webp'])) {
+            $this->reset('imgmap');
+            $message = 'Files not supported';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+         }elseif($imgmap->getSize() > 807152){
+            $this->reset('photo');
+            $message = 'Files must not be greater than 8MB';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+         }
+        //  $this->imgmap = $imgmap->temporaryUrl();
      }
     public function render()
     {
