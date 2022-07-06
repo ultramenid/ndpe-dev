@@ -116,7 +116,7 @@ class EditCorporateComponent extends Component
         if($this->manualValidation()){
             if(!$this->photo and !$this->imgmap){
                 $name = $this->uphoto;
-                $namemap = $this->imgmap;
+                $namemap = $this->uphotomap;
 
             }else{
                 try {
