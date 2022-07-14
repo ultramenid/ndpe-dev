@@ -24,13 +24,13 @@
                 <div class="flex sm:flex-row  flex-col justify-between" x-data="{ recs : 'corporate' }">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4 text-gray-200 mt-12  z-20 ">
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'corporate' }" @click=" recs = 'corporate' " class=" font-light cursor-pointer uppercase text-brown-ndpe">FOR PRODUCERS</a>
+                            <a :class="{ 'font-bold' : recs === 'corporate' }" @click=" recs = 'corporate' " class=" font-light cursor-pointer uppercase text-brown-ndpe">{{__('FOR PRODUCERS')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'brands' }" @click=" recs = 'brands'"   class=" font-light cursor-pointer uppercase text-brown-ndpe">FOR BUYERS & INVESTORS</a>
+                            <a :class="{ 'font-bold' : recs === 'brands' }" @click=" recs = 'brands'"   class=" font-light cursor-pointer uppercase text-brown-ndpe">{{__('FOR BUYERS & INVESTORS')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : recs === 'individual' }" @click=" recs = 'individual' "  class="font-light cursor-pointer uppercase text-brown-ndpe">FOR INDIVIDUAL CONSUMERS</a>
+                            <a :class="{ 'font-bold' : recs === 'individual' }" @click=" recs = 'individual' "  class="font-light cursor-pointer uppercase text-brown-ndpe">{{__('FOR INDIVIDUAL CONSUMERS')}}</a>
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full mt-10">
