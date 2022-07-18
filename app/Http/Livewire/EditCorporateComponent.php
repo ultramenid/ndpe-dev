@@ -41,9 +41,9 @@ class EditCorporateComponent extends Component
         $this->financialEN = $data->financialEN;
         $this->financialID = $data->financialID;
         $this->financialJP = $data->financialJP;
-        $this->buyerEN = $data->financialEN;
-        $this->buyerID = $data->financialID;
-        $this->buyerJP = $data->financialJP;
+        $this->buyerEN = $data->buyerEN;
+        $this->buyerID = $data->buyerID;
+        $this->buyerJP = $data->buyerJP;
         $this->performanceEN = $data->performanceEN;
         $this->performanceID = $data->performanceID;
         $this->performanceJP = $data->performanceJP;
