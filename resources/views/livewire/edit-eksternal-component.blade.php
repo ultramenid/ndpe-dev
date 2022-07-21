@@ -142,7 +142,7 @@
                             @if ($photo)
                                 <img src="{{$photo->temporaryUrl()}}" alt="" class=" mx-auto w-full rounded ">
                             @else
-                                <img src="{{ asset('/storage/'.$uphoto) }}" alt="" class=" mx-auto w-full rounded ">
+                                <img src="{{ asset('/storage/files/photos/'.$uphoto)  }}" alt="" class=" mx-auto w-full rounded ">
                             @endif
                         @endif
                         <input type='file' class="hidden" wire:model='photo' accept="image/*" />
