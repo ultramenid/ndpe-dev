@@ -28,6 +28,9 @@ class InternalComponent extends Component
             return [];
         }
     }
+    public function updatedSearch(){
+        $this->resetPage();
+    }
     public function delete($id){
 
         //load data to delete function

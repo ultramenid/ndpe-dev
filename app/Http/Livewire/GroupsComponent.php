@@ -53,6 +53,9 @@ class GroupsComponent extends Component
             return [];
         }
     }
+    public function updatedSearch(){
+        $this->resetPage();
+    }
     public function render()
     {
         $corporates = $this->getCorporates();
