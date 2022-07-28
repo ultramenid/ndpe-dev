@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="sm:block hidden w-3/12 ">
-                        <img class="h-40 w-72 object-cover" src="{{ asset('/storage/thumbnail/'.$item->img) }}" alt="{{$item->title}}">
+                        <img class="h-40 w-72 object-cover" src="{{ asset('/storage/files/photos/'.$item->img) }}" alt="{{$item->title}}">
                     </div>
                 </div>
                 <div class="border-b border-white mt-4"></div>
