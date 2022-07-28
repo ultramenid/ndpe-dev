@@ -15,7 +15,6 @@
         background-blend-mode:multiply;">
             @include('partials.nav')
             <div class="max-w-6xl mx-auto  px-6 py-6">
-                <h1 class="font-notoserif sm:text-6xl text-5xl text-brown-ndpe py-12">{{__('Benchmark')}}</h1>
                 <div class="prose  text-brown-ndpe py-4 max-w-3xl" >
                     {!! $benchmark->benchmark !!}
                 </div>

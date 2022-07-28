@@ -19,7 +19,6 @@
             <div class="max-w-6xl mx-auto px-6  text-gray-300 z-20"
             x-data="{ tabs: 'theplatform' }"
             >
-                <h1 class="sm:text-5xl text-4xl font-notoserif font-light text-brown-ndpe py-12 mt-12">The Platform</h1>
                 <div class="flex sm:flex-row flex-col justify-between sm:space-x-12 space-x-0 sm:space-y-0 space-y-6 mt-12">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4">
                         <div class="border-b border-white w-11/12">
