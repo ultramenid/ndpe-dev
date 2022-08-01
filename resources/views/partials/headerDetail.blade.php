@@ -68,7 +68,7 @@
                         <div class="border-l border-gray-300"></div>
                         <a href="{{ route(Route::currentRouteName(), ['id', $id, $slug]) }}"  class="cursor-pointer @if(App::getLocale() == 'id') text-white font-bold @endif ">Indonesia</a>
                         <div class="border-l border-gray-300"></div>
-                        <a href="{{ route(Route::currentRouteName(), ['jp', $id, $slug]) }}"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">Japan</a>
+                        <a href="#"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">Japan</a>
                     </div>
                 </div>
             </div>

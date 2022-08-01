@@ -22,16 +22,16 @@
                 <div class="flex sm:flex-row flex-col justify-between sm:space-x-12 space-x-0 sm:space-y-0 space-y-6 mt-12">
                     <div class="sm:w-5/12 w-full flex flex-col space-y-4">
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'theplatform' }" @click=" tabs = 'theplatform' " class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('BACKGROUND')}}</a>
+                            <a :class=" (tabs == 'theplatform') ? 'text-2xl font-extrabold cursor-pointer text-brown-ndpe' : 'text-2xl  font-light cursor-pointer text-brown-ndpe' " @click=" tabs = 'theplatform' ">{{__('BACKGROUND')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'ownership' }" @click=" tabs = 'ownership'"   class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('GOAL')}}</a>
+                            <a :class=" (tabs == 'ownership') ? 'text-2xl font-extrabold cursor-pointer text-brown-ndpe' : 'text-2xl  font-light cursor-pointer text-brown-ndpe' " @click=" tabs = 'ownership'"   >{{__('GOAL')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'editorial' }" @click=" tabs = 'editorial' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('CONTENT')}}</a>
+                            <a :class=" (tabs == 'editorial') ? 'text-2xl font-extrabold cursor-pointer text-brown-ndpe' : 'text-2xl  font-light cursor-pointer text-brown-ndpe' " @click=" tabs = 'editorial' "  >{{__('CONTENT')}}</a>
                         </div>
                         <div class="border-b border-white w-11/12">
-                            <a :class="{ 'font-bold' : tabs === 'content' }" @click=" tabs = 'content' "  class="text-2xl font-light cursor-pointer text-brown-ndpe">{{__('EDITORIAL')}}</a>
+                            <a :class=" (tabs == 'content') ? 'text-2xl font-extrabold cursor-pointer text-brown-ndpe' : 'text-2xl  font-light cursor-pointer text-brown-ndpe' " @click=" tabs = 'content' "  >{{__('EDITORIAL')}}</a>
                         </div>
                     </div>
                     <div class="sm:w-7/12 w-full">
@@ -47,9 +47,9 @@
                         <div x-show="tabs === 'content' "  x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe" >
                             {!!$about->content!!}
                         </div>
-                        <div x-show="tabs ==='timeline'" x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe">
+                        {{-- <div x-show="tabs ==='timeline'" x-cloak style="display: none !important" class="prose max-w-none text-brown-ndpe">
                             {!!$about->timeline!!}
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

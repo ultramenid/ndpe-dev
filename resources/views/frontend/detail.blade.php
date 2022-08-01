@@ -38,7 +38,7 @@
             <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 "
             x-data="{tabs: 'overview'}"
             >
-                <div class="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
+                <div class="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
                     {{-- overview --}}
                     <button
                         :class="{ 'lg:no-underline underline' : tabs === 'overview' }"
@@ -80,12 +80,12 @@
                     </button>
 
                     {{-- NDPE Performance --}}
-                    <button
+                    {{-- <button
                         :class="{ 'lg:no-underline underline' : tabs === 'performance' }"
                         @click=" tabs= 'performance'"
                         class="border py-2 bg-green-ndpe text-white col-span-1 font-semibold hover:underline">
                         NDPE Performance
-                    </button>
+                    </button> --}}
                 </div>
 
                 <div class="lg:grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 -mb-1 -mt-4 gap-4  hidden" >
@@ -124,9 +124,9 @@
                     <div x-show="tabs === 'buyer'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->buyer !!}
                     </div>
-                    <div x-show="tabs === 'performance'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
+                    {{-- <div x-show="tabs === 'performance'" x-cloak style="display: none !important" class="prose   max-w-none text-brown-ndpe">
                         {!! $detail->performance !!}
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

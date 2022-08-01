@@ -1,10 +1,11 @@
 {
+    "Recommendation To:" : "Rekomendasi Kepada:",
     "BACKGROUND" : "LATAR",
     "GOAL" : "TUJUAN",
     "CONTENT" : "MUATAN",
     "EDITORIAL" : "REDAKSI",
     "Source :" : "Sumber :",
-    "Save the remaining natural forest cover, including in concessions’." : "Menyelamatkan sisa tutupan hutan alam, termasuk di dalam konsesi’.",
+    "Saving the remaining natural forest cover" : "Menyelamatkan hutan alam tersisa",
     "About" : "Tentang",
     "Groups" : "Grup",
     "benchmark" : "Pedoman",
@@ -74,8 +75,8 @@
     "Purchase products shown by independent verification to have no raw materials violating the credible policy." : "Membeli produk yang ditunjukkan oleh verifikasi independen tidak memiliki bahan baku yang melanggar kebijakan kredibel.",
     "Ask for information on the origins of products where unknown and demand your shops to sell products that are shown by independent verification to have no trace of raw materials violating the policy or, better yet, ask for recycled products." : "Mintalah informasi tentang asal-usul produk yang tidak diketahui dan minta toko Anda untuk menjual produk yang ditunjukkan oleh verifikasi independen tidak memiliki jejak bahan baku yang melanggar kebijakan atau, lebih baik lagi, meminta produk daur ulang.",
     "Take action today to influence the behaviours of corporate groups producing/sourcing/processing/trading or brands, end users and investors sourcing or investing in deforestation risk commodities." : "Ambil tindakan hari ini untuk mempengaruhi perilaku kelompok perusahaan yang memproduksi/menjual/memproses/memperdagangkan atau merek, pengguna akhir dan investor yang mencari atau berinvestasi dalam komoditas berisiko deforestasi.",
-    "FOR PRODUCERS":"UNTUK PRODUSEN",
-    "FOR BUYERS & INVESTORS":"UNTUK PEMBELI & INVESTOR",
-    "FOR INDIVIDUAL CONSUMERS":"UNTUK KONSUMEN INDIVIDU"
+    "PRODUCERS":"PRODUSEN",
+    "BUYERS & INVESTORS":"PEMBELI & INVESTOR",
+    "INDIVIDUAL CONSUMERS":"KONSUMEN INDIVIDU"
 
 }

@@ -11,7 +11,7 @@
                 <div class="border-l border-gray-300"></div>
                 <a href="{{ route(Route::currentRouteName(), 'id') }}"  class="cursor-pointer @if(App::getLocale() == 'id') text-white font-bold @endif ">ID</a>
                 <div class="border-l border-gray-300"></div>
-                <a href="{{ route(Route::currentRouteName(), 'jp') }}"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">JP</a>
+                <a href="#"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">JP</a>
             </div>
         </div>
 
