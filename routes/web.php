@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\URL;
 // //https force https
 // URL::forceScheme('https');
 
-Route::redirect('/', '/en');
+Route::redirect('/', '/id');
 
 Route::group(['prefix' => '{lang}'], function () {
 
