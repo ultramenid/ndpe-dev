@@ -7,11 +7,11 @@
                 <img loading="lazy" src="{{ asset('assets/ig.png') }}"" alt="" class="h-3">
             </div>
             <div class="flex space-x-2 text-gray-300 text-sm">
-                <a href="{{ route(Route::currentRouteName(), ['en', $id, $slug]) }}"  class="cursor-pointer @if(App::getLocale() == 'en') text-white font-bold @endif">EN</a>
+                <a href="#"  class="cursor-pointer @if(App::getLocale() == 'en') text-white font-bold @endif">EN</a>
                 <div class="border-l border-gray-300"></div>
                 <a href="{{ route(Route::currentRouteName(), ['id', $id, $slug]) }}"  class="cursor-pointer @if(App::getLocale() == 'id') text-white font-bold @endif ">ID</a>
                 <div class="border-l border-gray-300"></div>
-                <a href="{{ route(Route::currentRouteName(), ['jp', $id, $slug]) }}"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">JP</a>
+                <a href="#"  class="cursor-pointer @if(App::getLocale() == 'jp') text-white font-bold @endif">JP</a>
             </div>
         </div>
 
