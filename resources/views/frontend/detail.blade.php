@@ -88,7 +88,7 @@
                     </button> --}}
                 </div>
 
-                <div class="lg:grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 -mb-1 -mt-4 gap-4  hidden" >
+                <div class="lg:grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 -mb-1 -mt-4 gap-4  hidden" >
                     <div class="grid justify-items-center">
                         <div x-show="tabs === 'overview'" x-cloak style="display: none !important" class="triangle-ndpe"></div>
                     </div>
@@ -104,9 +104,9 @@
                     <div class="grid justify-items-center">
                         <div x-show="tabs === 'buyer'" x-cloak style="display: none !important" class="triangle-ndpe"></div>
                     </div>
-                    <div class="grid justify-items-center">
+                    {{-- <div class="grid justify-items-center">
                         <div x-show="tabs === 'performance'" x-cloak style="display: none !important" class="triangle-ndpe"></div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="min-h-screen bg-green-ndpe px-4 py-6 text-white">
                     <div x-show="tabs === 'overview'" x-cloak style="display: none !important" class=" prose   max-w-none text-brown-ndpe ">
