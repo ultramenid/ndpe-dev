@@ -9,8 +9,8 @@
     <div class="h-min-screen bg-ndpe-profile py-6">
         @include('partials.nav')
         <div class="max-w-6xl mx-auto relative px-6">
-            <h1 class="sm:text-4xl text-2xl text-brown-ndpe font-bold font-notoserif  sm:mt-24  mt-12 mb-12">FORESTRY & AGRIBUSINESS GROUPS WE MONITOR</h1>
-            <div class="prose max-w-none text-brown-ndpe ">
+            {{-- <h1 class="sm:text-4xl text-2xl text-brown-ndpe font-bold font-notoserif  sm:mt-24  mt-12 mb-12">FORESTRY & AGRIBUSINESS GROUPS WE MONITOR</h1> --}}
+            <div class="prose  text-brown-ndpe sm:mt-24  mt-12 text-left max-w-3xl">
                 {!! $groups->textGroup !!}
             </div>
         </div>
