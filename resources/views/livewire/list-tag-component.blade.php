@@ -3,14 +3,14 @@
             <div class="sm:mt-4 mt-0">
                 <a class="text-gray-300 text-sm">{{ \Carbon\Carbon::parse($item->publishdate)->format('F, Y')}}</a>
                 <div class="flex justify-between space-x-6">
-                    <div class="text-white sm:w-9/12 w-full">
+                    <div class="text-white sm:w-8/12 w-full">
                         <a href="{{$item->sourceurl}}" target="_blank" class="sm:text-2xl text-2xl font-notoserif cursor-pointer hover:underline">{{$item->title}}</a>
                         <p class="text-sm mt-4 text-gray-300">{{$item->description}}</p>
 
                         <div class="flex mt-4 sm:flex-row flex-col sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 sm:items-center">
                             <a href="{{$item->sourceurl}}" target="_blank" class="cursor-pointer text-gray-300 hover:underline text-sm text-left">{{$item->sourcename}}</a>
                             <div class="border-r border-green-ndpe-2 h-6 sm:block hidden"></div>
-                            <div class="flex flex-wrap  justify-between sm:space-x-2 space-x-0 space-y-1 sm:space-y-0 text-sm">
+                            <div class="flex flex-wrap  space-x-2 space-y-1 sm:space-y-0 text-sm">
                                 @php
                                 $tagsList= (explode(",",$item->tags))
                             @endphp
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:block hidden w-3/12 ">
+                    <div class="sm:flex hidden w-4/12  justify-end">
                         <img class="h-40 w-72 object-cover" src="{{ asset('/storage/files/photos/'.$item->img) }}" alt="{{$item->title}}">
                     </div>
                 </div>
