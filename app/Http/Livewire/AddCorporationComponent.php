@@ -113,7 +113,7 @@ class AddCorporationComponent extends Component
                 'nilai2DescJP' => $this->nilai2DescJP,
                 'created_at' => Carbon::now('Asia/Jakarta')
             ]);
-            redirect()->to('/cms/groups');
+            redirect()->to('/cms/listgroups');
         };
 
     }
