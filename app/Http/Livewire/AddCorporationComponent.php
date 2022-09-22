@@ -206,6 +206,12 @@ class AddCorporationComponent extends Component
             $type = 'error'; //error, success
             $this->emit('toast',$message, $type);
             return;
+        }
+        elseif($this->photomap == ''){
+            $message = 'Image map  is required';
+            $type = 'error'; //error, success
+            $this->emit('toast',$message, $type);
+            return;
         }elseif($this->areaEN == ''){
             $message = 'Area english is required';
             $type = 'error'; //error, success
