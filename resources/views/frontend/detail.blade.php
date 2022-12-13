@@ -35,10 +35,10 @@
             </div>
 
             {{-- tabs lg --}}
-            <div class="min-h-screen bg-brown-ndpe mt-20 px-6 py-4 "
+            <div class="min-h-screen bg-brown-ndpe mt-20 sm:px-6 sm:py-4 px-0 py-0 "
             x-data="{tabs: 'overview'}"
             >
-                <div class="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 mb-6 gap-4" >
+                <div class="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 mb-6 gap-4 sm:px-0 sm:py-0 px-6 py-4" >
                     {{-- overview --}}
                     <button
                         :class="{ 'lg:no-underline underline' : tabs === 'overview' }"
