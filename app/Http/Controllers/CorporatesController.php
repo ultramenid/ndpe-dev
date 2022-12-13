@@ -26,11 +26,11 @@ class CorporatesController extends Controller
 
     public function selectGroups(){
         if (App::getLocale() == 'id') {
-            return 'id, name, descID as description, corporateSLUG as slug, img';
+            return 'id, name, descID as description, corporateSLUG , img , overviewEN as overview';
         }elseif(App::getLocale() == 'jp'){
-            return 'id, name, descJP as description, corporateSLUG as slug, img';
+            return 'id, name, descJP as description, corporateSLUG , img, overviewJP as overview';
         }else{
-            return 'id, name,descEN as description, corporateSLUG as slug, img';
+            return 'id, name,descEN as description, corporateSLUG , img, overviewID as overview';
         }
     }
     public function getGroups(){

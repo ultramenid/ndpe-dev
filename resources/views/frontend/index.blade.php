@@ -12,7 +12,7 @@
     @include('partials.hero')
 
     {{-- content --}}
-    <div class="bg-brown-ndpe py-12">
+    <div class="bg-brown-ndpe py-6">
         <div class="max-w-6xl mx-auto  px-6">
             <h1 class="font-notoserif text-ndpe text-4xl sm:px-0 px-4">{{__('Groups')}}</h1>
             {{-- <div class="sm:w-6/12  w-full text-ndpe mt-6">
@@ -44,7 +44,7 @@
                         },
                     },
                     })"
-                class="relative  mx-auto flex flex-row mt-8 mb-12"
+                class="relative  mx-auto flex flex-row mb-6"
                 >
                 <div class="absolute inset-y-0 left-0 z-10 flex items-center ">
                     <button @click="swiper.slidePrev()" x-ref="pref"
@@ -59,8 +59,8 @@
                     @foreach ($corporates as $item)
                         <div x-ref="slider" class="swiper-slide p-4 text-brown-ndpe">
                             <div class="bg-border-ndpe h-2"></div>
-                            <div class="bg-green-ndpe px-6 py-4">
-                                <a href="{{ route('corporatedetail', [app()->getLocale(), $item->id, $item->corporateSLUG]) }}"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
+                            <div class="bg-green-ndpe px-6 py-4 grid grid-rows-1 gap-10 h-full">
+                                <a href="@php if(strlen($item->overview) < 128){ echo '#'; }else{ echo route('corporatedetail', [app()->getLocale(), $item->id, $item->corporateSLUG]) ; } @endphp"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
                                 <p class="text-xs mb-6 leading-relaxed">{{$item->description}}
                                 </p>
                             </div>

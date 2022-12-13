@@ -31,11 +31,11 @@ class IndexController extends Controller
 
     public function getSelect(){
         if (App::getLocale() == 'id') {
-            return 'id, name, descID as description, corporateSLUG';
+            return 'id, name, descID as description, corporateSLUG, overviewEN as overview';
         }elseif(App::getLocale() == 'jp'){
-            return 'id, name, descJP as description, corporateSLUG';
+            return 'id, name, descJP as description, corporateSLUG, overviewJP as overview';
         }else{
-            return 'id, name,descEN as description, corporateSLUG';
+            return 'id, name,descEN as description, corporateSLUG, overviewID as overview';
         }
     }
     public function getFooterSelect(){

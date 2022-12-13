@@ -20,9 +20,9 @@
                 @foreach ($corporates as $item)
                 <div  class="text-brown-ndpe col-span-1">
                     <div class="bg-border-ndpe h-2"></div>
-                    <div class="bg-green-ndpe px-6 py-4">
+                    <div class="bg-green-ndpe px-6 py-4 grid grid-rows-1 gap-4 h-full">
                         <img src="{{ asset('/storage/files/photos/'.$item->img) }}" alt="{{$item->name}}" class="w-24 py-4">
-                        <a href="{{ route('corporatedetail', [app()->getLocale(), $item->id, $item->slug]) }}"  class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">{{$item->name}}</h2></a>
+                        <a href="@php if(strlen($item->overview) < 128){ echo '#'; }else{ echo route('corporatedetail', [app()->getLocale(), $item->id, $item->corporateSLUG]) ; } @endphp"  class="hover:underline"><h2 class="text-5xl font-notoserif mb-3">{{$item->name}}</h2></a>
                         <p class="text-xs mb-6 leading-relaxed">{{$item->description}}
                         </p>
                     </div>
