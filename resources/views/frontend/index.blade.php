@@ -61,7 +61,8 @@
                             <div class="bg-border-ndpe h-2"></div>
                             <div class="bg-green-ndpe px-6 py-4 grid grid-rows-1 gap-10 h-full">
                                 <a href="@php if(strlen($item->overview) < 128){ echo '#'; }else{ echo route('corporatedetail', [app()->getLocale(), $item->id, $item->corporateSLUG]) ; } @endphp"  class="hover:underline"><h2 class="text-3xl font-notoserif mb-3">{{$item->name}}</h2></a>
-                                <p class="text-xs mb-6 leading-relaxed">{{$item->description}}
+                                @php if(strlen($item->overview) < 128){ echo 'Under construction'; }else{ echo '<p class="text-xs mb-6 leading-relaxed">'.$item->description.'' ; } @endphp
+
                                 </p>
                             </div>
                         </div>
