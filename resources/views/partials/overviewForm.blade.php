@@ -60,7 +60,7 @@
                 <div class="w-full">
                     <label>
                         <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 1:</h2>
-                        <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value1' >
+                        <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value1' >
                     </label>
                     <div x-data="{count:0}" class="mb-6 mt-4">
                         <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description English:</h2>
@@ -88,7 +88,7 @@
                 <div class="w-full">
                     <label >
                         <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">value 2:</h2>
-                        <input type="number" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value2' >
+                        <input type="text" class="bg-gray-100 dark:bg-newgray-700 text-newgray-700 dark:text-gray-300 rounded w-full border  py-2 px-4 focus:outline-none border-gray-300 dark:border-opacity-20"  wire:model.defer='value2' >
                     </label>
                     <div x-data="{count:0}" class="mb-6 mt-4">
                         <h2 class="text-newbg-newgray-900 dark:text-gray-300 italic">Description English:</h2>
